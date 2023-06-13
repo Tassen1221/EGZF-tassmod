@@ -111,12 +111,13 @@ characters={
 			}
 			available = {
 				NOT = { has_idea = idea_chntrimmel }
+				hidden_trigger = { NOT = { has_character = CHN_pharynx } }
 			}
 			traits = {
 				army_chief_maneuver_2
 			}
 			ai_will_do = {
-				factor = 1.5
+				factor = 1
 			}
 		}
 	}
@@ -446,7 +447,7 @@ characters={
 				army_chief_maneuver_2
 			}
 			ai_will_do = {
-				factor = 1.5
+				factor = 1.8
 			}
 		}
 	}
@@ -521,6 +522,7 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			legacy_id=-1
+			desc = CHN_DESC_SOOTY
 		}
 	}
 	CHN_dieter_heinrich={
@@ -626,6 +628,9 @@ characters={
 			}
 			traits = {
 				army_armored_2
+			}
+			ai_will_do = {
+				factor = 1.1
 			}
 		}
 	}
@@ -798,7 +803,7 @@ characters={
 				army_chief_offensive_2
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.5
 			}
 		}
 	}
@@ -935,7 +940,7 @@ characters={
 				army_infantry_1 
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.1
 			}
 		}
 	}
@@ -1007,7 +1012,7 @@ characters={
 				army_logistics_2 
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.1
 			}
 		}
 	}
@@ -1155,7 +1160,7 @@ characters={
 				captain_of_industry 
 			}
 			ai_will_do = {
-				factor = 1.5
+				factor = 1.6
 			}
 		}
 	}
@@ -1177,7 +1182,7 @@ characters={
 				war_industrialist
 			}
 			ai_will_do = {
-				factor = 1.5
+				factor = 1.6
 			}
 		}
 	}
@@ -1281,6 +1286,7 @@ characters={
 		name=chn_queen_argynnis
 		portraits={
 			army={
+				large="gfx/leaders/CHN/Argynnis_Vraks.tga"
 				small= GFX_idea_CHN_queen_argynnis
 			}
 		}
@@ -1364,6 +1370,14 @@ characters={
 				traits = {
 					great_nobody
 				}
+			}
+		}
+	}
+	CHN_midas_the_golden_lord = {
+		name = CHN_midas_the_golden_lord
+		portraits={
+			civilian={
+				large="gfx/leaders/PLB/Midas.tga"
 			}
 		}
 	}

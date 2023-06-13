@@ -918,7 +918,7 @@ tactic_slow_tank_attack = { #Unique Aquileian tank attack tactic
 	}
 
 	picture = blitz
-	countered_by = tactic_WNG_defend
+	#countered_by = tactic_elastic_defense
 
 	attacker_movement_speed = -0.5
 	attacker = 0.25
@@ -1001,8 +1001,8 @@ poison_ammo_ambush = { #zebra tactics
 
 	picture = tactic_guerrilla_tactics
 
-	combat_width = -0.25
-	attacker = -0.4
+	combat_width = -0.2
+	attacker = -0.3
 }
 zebra_steppe_charge = { #zebra tactics
 	is_attacker = yes
@@ -1065,22 +1065,4 @@ tactic_masterful_blitz = { #Improved version of Blitz for Soviets
 	combat_width = 0.1
 	attacker = 0.2
 	defender = -0.2
-}
-
-tactic_WNG_defend = { #Beakolini's Chad Defence
-	is_attacker = no
-	trigger = {
-		is_attacker = no
-		phase = no
-		hardness > 0.7
-	}
-
-	active = no
-
-	base =  { factor = 8 }
-	picture = WNG_defend
-
-	attacker_movement_speed = -0.5
-	attacker = -0.4
-	defender = 0.25
 }
