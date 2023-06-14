@@ -9432,15 +9432,6 @@ country_event = {
 
 
 country_event = {
-	id = bat.216
-	title = bat.216.t
-	desc = bat.216.d
-	is_triggered_only = yes
-	picture = GFX_event_solarempire
-	option = {
-		name = bat.216.a
-		add_stability = -0.05
-	}country_event = {
 	id = bat.215
 	title = bat.215.t
 	desc = bat.215.d
@@ -9451,3 +9442,13 @@ country_event = {
 }
 
 
+country_event = {
+	id = bat.216
+	title = bat.216.t
+	desc = bat.216.d
+	is_triggered_only = yes
+	picture = GFX_event_solarempire
+	option = {
+		name = bat.216.a
+		add_stability = -0.05
+	}
