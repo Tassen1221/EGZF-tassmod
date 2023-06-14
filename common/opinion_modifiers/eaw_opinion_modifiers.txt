@@ -76,6 +76,8 @@ opinion_modifiers = {
 
 	mortal_enemies = { value = -300 }
 
+	absolute_madfish = { value = -200 }
+
 	friendly_government = { value = 170 months = 150 }
 
 	common_cause = { value = 50 }
@@ -231,7 +233,7 @@ opinion_modifiers = {
 
 	CCN_visit_to_EQS = { value = 50 months = 36 }
 
-	STG_EQS_accepted_core_transfer = { value = 100 months = 36 }
+	STG_EQS_accepted_core_transfer = { value = 400 months = 36 }
 
 	CHN_Embargo = { trade = yes value = -300 }
 
@@ -257,6 +259,16 @@ opinion_modifiers = {
 	GRI_banquet_refused = { value = -15 months = 12 }
 
 	GRI_refused_land = { value = -50 months = 12 }
+
+	GRI_AF_traitor_vassal = { value = -100 }
+
+	GRI_traitor_heretic = { value = -100 }
+
+	GRI_AF_corpse_emperor = { value = -100 }
+
+	FAT_AF_maarite_traitor = { value = -100 }
+
+	FAT_AF_spineless_vassal = { value = -100 }
 
 	LUS_refused_trade_deal = { value = -50 months = 24 }
 
@@ -490,4 +502,5 @@ opinion_modifiers = {
 	
 	HIP_SIR_ancient_enemies = { value = -100 }
 	HIP_SIR_ancient_enemies_2 = { value = -50 }
+	HEL_heretical_pretenders = { value = -100 }
 }
