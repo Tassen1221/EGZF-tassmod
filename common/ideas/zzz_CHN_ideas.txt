@@ -641,11 +641,9 @@ ideas = {
 				experience_gain_army = 0.02
 				experience_gain_navy = 0.02
 				experience_gain_air = 0.02
-				army_leader_start_defense_level = 1
-				navy_leader_start_defense_level = 1
-				max_dig_in = 0.5
-				army_infantry_defence_factor = 0.05
-				air_ace_generation_chance_factor = 0.05
+				army_strength_factor = 0.05
+				max_dig_in = 2
+				army_infantry_defence_factor = 0.1
 			}
 		}
 		changeling_school_of_war = {
@@ -661,12 +659,10 @@ ideas = {
 				experience_gain_army = 0.02
 				experience_gain_navy = 0.02
 				experience_gain_air = 0.02
+				army_org_factor = 0.075
 				planning_speed = 0.10
 				max_command_power = 10
-				army_leader_start_attack_level = 1
-				navy_leader_start_attack_level = 1
-				army_infantry_attack_factor = 0.05
-				air_weather_penalty = -0.05
+				army_infantry_attack_factor = 0.1
 			}
 		}
 		changeling_spies = {

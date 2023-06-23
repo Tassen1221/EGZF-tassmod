@@ -2460,12 +2460,6 @@ focus = {
 		id = CHN_Air_Force
 		icon = GFX_goal_chn_luftwaffe
 		cost = 9
-		available = {
-			OR = {
-				has_completed_focus = CHN_griffon_school_of_war
-				has_completed_focus = CHN_changeling_school_of_war
-			}
-		}
 		x = 29
 		y = 0
 
@@ -3200,13 +3194,6 @@ focus = {
 		id = CHN_Army
 		icon = GFX_goal_chn_man_helmet
 		cost = 9
-		available = {
-			OR = {
-				has_completed_focus = CHN_griffon_school_of_war
-				has_completed_focus = CHN_changeling_school_of_war
-			}
-		}
-
 		x = 21
 		y = 0
 		ai_will_do = { factor = 90 }
@@ -3738,12 +3725,6 @@ focus = {
 		cost = 9
 		x = 39
 		y = 0
-		available = {
-			OR = {
-				has_completed_focus = CHN_griffon_school_of_war
-				has_completed_focus = CHN_changeling_school_of_war
-			}
-		}
 		mutually_exclusive = {
 			focus = chn_navymimic
 		}
@@ -3794,12 +3775,6 @@ focus = {
 		cost = 9
 		x = 37
 		y = 0
-		available = {
-			OR = {
-				has_completed_focus = CHN_griffon_school_of_war
-				has_completed_focus = CHN_changeling_school_of_war
-			}
-		}
 		mutually_exclusive = {
 			focus = chn_navylysander
 		}
