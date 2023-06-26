@@ -1,0 +1,126 @@
+HIP_directives_category = {
+	WW_HIP_navy_mission_1 = {
+		icon = generic_naval
+		allowed = {
+			original_tag = HIP
+		}
+		activation = {
+			date > 1007.1.1
+		}
+		available = {
+			has_navy_size = {
+				size > 3
+				archetype = ship_hull_carrier
+			}
+		}
+		days_mission_timeout = 1460
+		fire_only_once = yes
+		is_good = no
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Guardian Class"
+				type = ship_hull_heavy_2
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bb_2
+					front_1_custom_slot = ship_heavy_battery_2
+					mid_1_custom_slot = ship_anti_air_2
+					mid_2_custom_slot = ship_anti_air_2
+					rear_1_custom_slot = ship_anti_air_2
+				}
+			}
+			create_equipment_variant = {
+				name = "Wakefish Class"
+				type = ship_hull_light_2
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_engine_slot = light_ship_engine_2
+					fixed_ship_torpedo_slot = ship_torpedo_1
+				}
+			}
+			load_oob = "WW_HIP_directive_naval"
+		}
+	}
+	WW_HIP_navy_mission_2 = {
+		icon = generic_merge_plant_ship
+		allowed = {
+			original_tag = HIP
+		}
+		activation = {
+			date > 1007.1.1
+		}
+		available = {
+		}
+		days_mission_timeout = 1276
+		fire_only_once = yes
+		complete_effect = {
+		}
+	}
+	WW_HIP_air_mission_1 = {
+		icon = generic_air
+		allowed = {
+			original_tag = HIP
+		}
+		activation = {
+			date > 1007.1.1
+		}
+		available = {
+		}
+		days_mission_timeout = 1276
+		fire_only_once = yes
+		complete_effect = {
+		}
+	}
+	WW_HIP_air_mission_2 = {
+		icon = generic_merge_plant_aircraft
+		allowed = {
+			original_tag = HIP
+		}
+		activation = {
+			date > 1007.1.1
+		}
+		available = {
+		}
+		days_mission_timeout = 1276
+		fire_only_once = yes
+		complete_effect = {
+		}
+	}
+	WW_HIP_army_mission_1 = {
+		icon = generic_tank
+		allowed = {
+			original_tag = HIP
+		}
+		activation = {
+			date > 1007.1.1
+		}
+		available = {
+		}
+		days_mission_timeout = 1276
+		fire_only_once = yes
+		complete_effect = {
+		}
+	}
+	WW_HIP_army_mission_2 = {
+		icon = generic_merge_plant_tank
+		allowed = {
+			original_tag = HIP
+		}
+		activation = {
+			date > 1007.1.1
+		}
+		available = {
+		}
+		days_mission_timeout = 1276
+		fire_only_once = yes
+		complete_effect = {
+		}
+	}
+}
+	
+	

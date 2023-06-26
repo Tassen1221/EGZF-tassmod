@@ -1,0 +1,26 @@
+units = {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Directive Fleet"			
+		naval_base = 18741
+		task_force = {
+			name = "Directive Fleet"
+			location = 18741
+			ship = { name = "RHS Guardian" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = HIP version_name = "Guardian Class" } } }
+			ship = { name = "RHS Defender" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = HIP version_name = "Guardian Class" } } }
+			ship = { name = "RHS Protector" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = HIP version_name = "Guardian Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "Wakefish" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+		}
+	}
+}
