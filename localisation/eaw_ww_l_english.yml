@@ -201,6 +201,14 @@ l_english:
  WW_incompetent_tanks:0 "Inexperienced Armor Corps"
  WW_incompetent_tanks_desc:0 "Our armored divisions are completely untested. They aren't yet ready for combat at home, nevermind on a foreign continent."
 
+ HIP_directives_category:0 "Military Directives"
+ WW_HIP_navy_mission:0 "Naval Production Directive"
+ WW_HIP_air_mission:0 "Airforce Modernization Directive"
+ WW_HIP_army_mission:0 "Army Mobilization Directive"
+ WW_HIP_directive_navy_tt:0 "Spawns in a powerful fleet comprised of three §YGuardian Class§! battleships, four §YFirework Class§! heavy cruisers and twelve §YWakefish Class§! destroyers."
+ WW_HIP_directive_air_tt:0 "Researching better modules and airframes will improve the quality of the §YP-32 Corvus§! fighter and §YA-60 Thundercloud§! CAS."
+ WW_HIP_directive_army_tt:0 "Spawns in four 28 width §YHeavy Artillery Divisions§! as well as preparing eighteen 14 width §YHome Guard Divisions§! in case of invasion."
+
  WW_HIP_primo_victoria1:0 "Primo Victoria"
  WW_HIP_primo_victoria2:0 "Through the Gates of Hell"
  WW_HIP_primo_victoria2_tt:0 "Naval Damage: §G+10.00%§!\nNaval Defense: §G+10.00%§!"

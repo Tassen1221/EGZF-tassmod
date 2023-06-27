@@ -1,5 +1,5 @@
 HIP_directives_category = {
-	WW_HIP_navy_mission_1 = {
+	WW_HIP_navy_mission = {
 		icon = generic_naval
 		allowed = {
 			original_tag = HIP
@@ -8,9 +8,15 @@ HIP_directives_category = {
 			date > 1007.1.1
 		}
 		available = {
+			has_tech = improved_ship_hull_carrier
+			has_tech = basic_ship_hull_heavy
 			has_navy_size = {
 				size > 3
 				archetype = ship_hull_carrier
+			}
+			has_navy_size = {
+				size > 49
+				archetype = ship_hull_light
 			}
 		}
 		days_mission_timeout = 1460
@@ -34,6 +40,22 @@ HIP_directives_category = {
 				}
 			}
 			create_equipment_variant = {
+				name = "Firework Class"
+				type = ship_hull_cruiser_2
+				modules = {
+					fixed_ship_battery_slot = ship_medium_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_engine_slot = cruiser_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_cruiser_3
+					front_1_custom_slot = ship_medium_battery_2
+					mid_1_custom_slot = ship_medium_battery_2
+					mid_2_custom_slot = ship_medium_battery_2
+					rear_1_custom_slot = ship_medium_battery_2
+				}
+			}
+			create_equipment_variant = {
 				name = "Wakefish Class"
 				type = ship_hull_light_2
 				modules = {
@@ -43,25 +65,13 @@ HIP_directives_category = {
 					fixed_ship_torpedo_slot = ship_torpedo_1
 				}
 			}
-			load_oob = "WW_HIP_directive_naval"
+			hidden_effect = {
+				load_oob = "WW_HIP_directive_naval"
+			}
+			custom_effect_tooltip = WW_HIP_directive_navy_tt
 		}
 	}
-	WW_HIP_navy_mission_2 = {
-		icon = generic_merge_plant_ship
-		allowed = {
-			original_tag = HIP
-		}
-		activation = {
-			date > 1007.1.1
-		}
-		available = {
-		}
-		days_mission_timeout = 1276
-		fire_only_once = yes
-		complete_effect = {
-		}
-	}
-	WW_HIP_air_mission_1 = {
+	WW_HIP_air_mission = {
 		icon = generic_air
 		allowed = {
 			original_tag = HIP
@@ -70,28 +80,184 @@ HIP_directives_category = {
 			date > 1007.1.1
 		}
 		available = {
+			has_deployed_air_force_size = {
+				size > 599
+				type = fighter
+			}
+			has_deployed_air_force_size = {
+				size > 99
+				type = strategic_bomber
+			}
+			has_deployed_air_force_size = {
+				size > 199
+				type = naval_bomber
+			}
 		}
 		days_mission_timeout = 1276
 		fire_only_once = yes
+		is_good = no
 		complete_effect = {
+			if = {
+				limit = {
+					has_tech = improved_small_airframe
+					has_tech = engines_3
+					has_tech = aa_hmg
+					has_tech = survivability_studies
+					has_tech = range_improvement
+				}
+				create_equipment_variant = {
+					name = "P-32 Corvus" 
+					type = small_plane_airframe_2
+					modules = {
+						fixed_main_weapon_slot = heavy_mg_4x
+						fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+						fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+						engine_type_slot = engine_3_1x
+						special_type_slot_1 = armor_plate_small
+						special_type_slot_2 = self_sealing_fuel_tanks_small
+						special_type_slot_3 = drop_tanks
+					}
+					icon = "GFX_USA_fighter2_medium"
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = improved_small_airframe
+					has_tech = engines_3
+					has_tech = aa_hmg
+					has_tech = survivability_studies
+				}
+				create_equipment_variant = {
+					name = "P-32 Corvus" 
+					type = small_plane_airframe_2
+					modules = {
+						fixed_main_weapon_slot = heavy_mg_4x
+						fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+						fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+						engine_type_slot = engine_3_1x
+						special_type_slot_1 = armor_plate_small
+						special_type_slot_2 = armor_plate_small
+						special_type_slot_3 = self_sealing_fuel_tanks_small
+					}
+					icon = "GFX_USA_fighter2_medium"
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = improved_small_airframe
+					has_tech = engines_3
+					has_tech = aa_hmg
+				}
+				create_equipment_variant = {
+					name = "P-32 Corvus" 
+					type = small_plane_airframe_2
+					modules = {
+						fixed_main_weapon_slot = heavy_mg_4x
+						fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+						fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+						engine_type_slot = engine_3_1x
+					}
+					icon = "GFX_USA_fighter2_medium"
+				}
+			}
+			else = {
+				create_equipment_variant = {
+					name = "P-32 Corvus" 
+					type = small_plane_airframe_1
+					modules = {
+						fixed_main_weapon_slot = light_mg_4x
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
+						engine_type_slot = engine_2_1x
+					}
+					icon = "GFX_USA_fighter1_medium"
+				}
+			}
+			if = {
+				limit = {
+					has_tech = improved_small_airframe
+					has_tech = engines_3
+					has_tech = antitank2
+				}
+				create_equipment_variant = {
+					name = "A-60 Thundercloud" 
+					type = small_plane_airframe_2
+					modules = {
+						fixed_main_weapon_slot = tank_buster_2
+						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = small_bomb_bay
+						engine_type_slot = engine_3_1x
+						special_type_slot_1 = dive_brakes_small
+					}
+					icon = "GFX_USA_CAS2_medium"
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = improved_small_airframe
+					has_tech = engines_3
+				}
+				create_equipment_variant = {
+					name = "A-60 Thundercloud" 
+					type = small_plane_airframe_2
+					modules = {
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = small_bomb_bay
+						engine_type_slot = engine_3_1x
+						special_type_slot_1 = dive_brakes_small
+					}
+					icon = "GFX_USA_CAS2_medium"
+				}
+			}
+			else = {
+				create_equipment_variant = {
+					name = "A-60 Thundercloud" 
+					type = small_plane_airframe_1
+					modules = {
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+						engine_type_slot = engine_2_1x
+						special_type_slot_1 = dive_brakes_small
+					}
+					icon = "GFX_USA_CAS1_medium"
+				}
+			}
+			create_equipment_variant = {
+				name = "B-19 Flying Tower" 
+				type = large_plane_airframe_0
+				modules = {
+					fixed_main_weapon_slot = large_bomb_bay
+					fixed_auxiliary_weapon_slot_1 = large_bomb_bay
+					fixed_auxiliary_weapon_slot_2 = large_bomb_bay
+					engine_type_slot = engine_2_6x
+					special_type_slot_1 = lmg_defense_turret_2x
+					special_type_slot_2 = lmg_defense_turret_2x
+					special_type_slot_3 = lmg_defense_turret_2x
+					special_type_slot_4 = lmg_defense_turret_2x
+					special_type_slot_5 = lmg_defense_turret_2x
+				}
+				icon = "GFX_USA_basic_large_airframe_medium"
+			}
+
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+				amount = 200
+				variant_name = "P-32 Corvus"
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+				amount = 200
+				variant_name = "A-60 Thundercloud"
+			}
+			add_equipment_to_stockpile = {
+				type = large_plane_airframe
+				amount = 200
+				variant_name = "B-19 Flying Tower"
+			}
+			custom_effect_tooltip = WW_HIP_directive_air_tt
 		}
 	}
-	WW_HIP_air_mission_2 = {
-		icon = generic_merge_plant_aircraft
-		allowed = {
-			original_tag = HIP
-		}
-		activation = {
-			date > 1007.1.1
-		}
-		available = {
-		}
-		days_mission_timeout = 1276
-		fire_only_once = yes
-		complete_effect = {
-		}
-	}
-	WW_HIP_army_mission_1 = {
+	WW_HIP_army_mission = {
 		icon = generic_tank
 		allowed = {
 			original_tag = HIP
@@ -100,25 +266,73 @@ HIP_directives_category = {
 			date > 1007.1.1
 		}
 		available = {
+			has_army_manpower = {
+				size > 400000
+			}
+			has_equipment = {
+    				infantry_equipment > 29999
+			}
+			has_equipment = {
+    				artillery_equipment > 1999
+			}
 		}
 		days_mission_timeout = 1276
 		fire_only_once = yes
+		is_good = no
 		complete_effect = {
-		}
-	}
-	WW_HIP_army_mission_2 = {
-		icon = generic_merge_plant_tank
-		allowed = {
-			original_tag = HIP
-		}
-		activation = {
-			date > 1007.1.1
-		}
-		available = {
-		}
-		days_mission_timeout = 1276
-		fire_only_once = yes
-		complete_effect = {
+			division_template = {
+				name = "Heavy Artillery Division"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 0 y = 4 }
+			
+	    	   		 	infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 1 y = 4 }
+
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+					artillery_brigade = { x = 2 y = 2 }
+					artillery_brigade = { x = 2 y = 3 }
+
+					artillery_brigade = { x = 3 y = 0 }
+					artillery_brigade = { x = 3 y = 1 }
+					artillery_brigade = { x = 3 y = 2 }
+					artillery_brigade = { x = 3 y = 3 }
+					}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1165 }
+				create_unit = {
+					division = "name = \"1st Heavy Artillery Division\" division_template = \"Heavy Artillery Division\" start_experience_factor = 1.0" 
+					owner = HIP
+				}
+				create_unit = {
+					division = "name = \"2nd Heavy Artillery Division\" division_template = \"Heavy Artillery Division\" start_experience_factor = 1.0" 
+					owner = HIP
+				}
+				create_unit = {
+					division = "name = \"3rd Heavy Artillery Division\" division_template = \"Heavy Artillery Division\" start_experience_factor = 1.0" 
+					owner = HIP
+				}
+				create_unit = {
+					division = "name = \"4th Heavy Artillery Division\" division_template = \"Heavy Artillery Division\" start_experience_factor = 1.0" 
+					owner = HIP
+				}
+			}
+			hidden_effect = {
+				set_country_flag = WW_HIP_home_guard
+			}
+			custom_effect_tooltip = WW_HIP_directive_army_tt
 		}
 	}
 }
