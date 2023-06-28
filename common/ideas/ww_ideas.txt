@@ -166,6 +166,23 @@ ideas = {
 				}
 			}		
 		}
+		WW_HIP_armed_citizens = {
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.25
+				resistance_target_on_our_occupied_states = 0.2
+			}		
+		}
+		WW_HIP_naval_focused = {
+			removal_cost = -1
+			picture = generic_the_london_naval_treaty
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_speed_arms_factory_factor = -0.8
+				production_speed_dockyard_factor = 0.3
+			}		
+		}
 		WW_equus_only_dockyard_rebalancer = {
 			removal_cost = -1
 			picture = air_support_focus

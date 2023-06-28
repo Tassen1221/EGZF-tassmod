@@ -180,7 +180,7 @@ HIP_directives_category = {
 				}
 				create_equipment_variant = {
 					name = "A-60 Thundercloud" 
-					type = small_plane_airframe_2
+					type = small_plane_cas_airframe_2
 					modules = {
 						fixed_main_weapon_slot = tank_buster_2
 						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
@@ -198,11 +198,11 @@ HIP_directives_category = {
 				}
 				create_equipment_variant = {
 					name = "A-60 Thundercloud" 
-					type = small_plane_airframe_2
+					type = small_plane_cas_airframe_2
 					modules = {
 						fixed_main_weapon_slot = small_bomb_bay
 						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
-						fixed_auxiliary_weapon_slot_2 = small_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = bomb_locks
 						engine_type_slot = engine_3_1x
 						special_type_slot_1 = dive_brakes_small
 					}
@@ -212,7 +212,7 @@ HIP_directives_category = {
 			else = {
 				create_equipment_variant = {
 					name = "A-60 Thundercloud" 
-					type = small_plane_airframe_1
+					type = small_plane_cas_airframe_1
 					modules = {
 						fixed_main_weapon_slot = small_bomb_bay
 						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
@@ -245,7 +245,7 @@ HIP_directives_category = {
 				variant_name = "P-32 Corvus"
 			}
 			add_equipment_to_stockpile = {
-				type = small_plane_airframe
+				type = small_plane_cas_airframe
 				amount = 200
 				variant_name = "A-60 Thundercloud"
 			}
