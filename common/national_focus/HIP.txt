@@ -158,7 +158,6 @@ focus_tree = {
 		completion_reward = {
 			two_random_industrial_complex = yes
 			two_random_industrial_complex = yes
-			add_stability = 0.05
 		}
 	}
 	shared_focus = {
@@ -184,6 +183,10 @@ focus_tree = {
 				has_idea = HIP_island_buff8
 			}
 		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 
 		completion_reward = {
 			every_core_state = {
@@ -228,6 +231,10 @@ focus_tree = {
 				infantry_equipment > 9999
 			}
 		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -337,15 +344,17 @@ focus_tree = {
 		}
 
 		available = {
+			date > 1012.01.01
 		}
 
 		completion_reward = {
+			add_stability = 0.2
 		}
 	}
 	shared_focus = {
 		id = WW_HIP_situation_stable
 		icon = GFX_goal_generic_defence
-		cost = 5
+		cost = 10
 		x = -1
 		y = 1
 		relative_position_id = WW_HIP_first_year
@@ -359,15 +368,25 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				has_idea = HIP_island_buff3
+				has_idea = HIP_island_buff4
+				has_idea = HIP_island_buff5
+			}
 		}
 
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
 		completion_reward = {
+			add_ideas = WW_HIP_situation_stable_army
 		}
 	}
 	shared_focus = {
 		id = WW_HIP_situation_good
 		icon = GFX_goal_generic_demand_territory
-		cost = 5
+		cost = 10
 		x = 1
 		y = 1
 		relative_position_id = WW_HIP_first_year
@@ -381,15 +400,24 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				has_idea = HIP_island_buff1
+				has_idea = HIP_island_buff2
+			}
 		}
 
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
 		completion_reward = {
+			add_ideas = WW_HIP_situation_good_army
 		}
 	}
 	shared_focus = {
 		id = WW_HIP_counter_attack
 		icon = GFX_goal_generic_amphibious_assault
-		cost = 5
+		cost = 10
 		x = 1
 		y = 1
 		relative_position_id = WW_HIP_situation_stable
@@ -403,6 +431,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = WW_HIP_counter_attack_tt
+			hidden_effect = {
+				HIP = {
+					country_event = ww.13
+				}
+				if = {
+					limit = {
+						has_completed_focus = WW_HIP_situation_good
+					}
+					HIP = {
+						country_event = ww.13
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -418,9 +460,13 @@ focus_tree = {
 		}
 
 		available = {
+			697 = {
+				is_controlled_by = HIP
+			}
 		}
 
 		completion_reward = {
+			add_ideas = WW_HIP_primo_victoria_spirit
 		}
 	}
 	shared_focus = {
@@ -436,7 +482,6 @@ focus_tree = {
 		}
 
 		available = {
-			date < 1012.01.01
 			num_of_naval_factories < 30
 			CTH = {
 				num_of_naval_factories > 50

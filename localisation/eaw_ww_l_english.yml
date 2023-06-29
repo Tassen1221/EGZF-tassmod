@@ -209,11 +209,6 @@ l_english:
  WW_HIP_directive_air_tt:0 "Researching better modules and airframes will improve the quality of the §YP-32 Corvus§! fighter and §YA-60 Thundercloud§! CAS."
  WW_HIP_directive_army_tt:0 "Spawns in four 28 width §YHeavy Artillery Divisions§! as well as preparing eighteen 14 width §YHome Guard Divisions§! in case of invasion."
 
- WW_HIP_primo_victoria1:0 "Primo Victoria"
- WW_HIP_primo_victoria2:0 "Through the Gates of Hell"
- WW_HIP_primo_victoria2_tt:0 "Naval Damage: §G+10.00%§!\nNaval Defense: §G+10.00%§!"
- WW_HIP_primo_victoria3:0 "As We Make Our Way to Heaven"
-
  WW_HIP_war_begins:0 "A Storm Again"
  WW_HIP_situation_bad:0 "Situation Bad"
  WW_HIP_prepare_worst:0 "Prepare for the Worst"
@@ -222,8 +217,16 @@ l_english:
  WW_HIP_situation_stable:0 "Situation Stable"
  WW_HIP_situation_good:0 "Situation Good"
  WW_HIP_counter_attack:0 "Our First Strike"
+ WW_HIP_counter_attack_tt:0 "Spawns in ten 40 width §YSpecial Marine Divisions§! if the situation is stable or twenty 40 width §YSpecial Marine Divisions§! if the situation is good."
  WW_HIP_primo_victoria:0 "Primo Victoria"
  WW_HIP_naval_race:0 "Win the Naval Race"
+
+ WW_HIP_armed_citizens:0 "Citizen Militias"
+ WW_HIP_situation_stable_army:0 "Defensive Posture"
+ WW_HIP_situation_good_army:0 "Offensive Posture"
+ WW_HIP_naval_focused:0 "Naval Arms Race"
+ WW_HIP_primo_victoria_spirit:0 "Primo Victoria"
+
 
  queen_yaria_research_tt:0 "Gain §G1§! Research Slot.\n"
  queen_argynnis_research_tt:0 "Enables: §YMagical Tanks§!\n" #You don't see anything danior
@@ -276,7 +279,7 @@ l_english:
 
  HIP_island_buff1:0 "Hippogriffian Islands: §GSafe§!" 
  HIP_island_buff2:0 "Hippogriffian Islands: §GSlightly Threatened§!" 
- HIP_island_buff3:0 "Hippogriffian Islands: §YHeavily Threatened§!" 
+ HIP_island_buff3:0 "Hippogriffian Islands: §YThreatened§!" 
  HIP_island_buff4:0 "Hippogriffian Islands: §YSlight Danger§!" 
  HIP_island_buff5:0 "Hippogriffian Islands: §OIncreasingly Dangerous§!" 
  HIP_island_buff6:0 "Hippogriffian Islands: §ODangerous§!"
@@ -298,7 +301,6 @@ l_english:
 
  HIP_gates_of_hell:0 "Primo Victoria"
  HIP_gates_of_hell_desc:0 "You're about to embark upon the Great Crusade, toward which we have striven these many months. The eyes of the world are upon you. In company with our brave Allies and brothers-in-arms on other Fronts you will bring about the destruction of the Chiropterran war machine, the elimination of the Legion's tyranny over oppressed peoples of Zebrica, and security for ourselves in a free world."
- WW_HIP_gates_of_hell_tt:0 "Spawns §G10§! Elite Marine Divisions" 
 
  CTH_annex_BAT:0 "Annex BAT"
  BAT_annex_CTH:0 "Annex CTH"

@@ -1,0 +1,56 @@
+ideas = {
+	country = {
+		WW_HIP_situation_stable_army = {
+			removal_cost = -1
+			picture = eng_special_air_service
+			modifier = {
+				conscription = 0.01
+				army_org_factor = 0.05
+				army_infantry_defence_factor = 0.075
+				army_core_defence_factor = 0.075
+				max_dig_in = 3
+			}
+		
+		}
+
+		WW_HIP_situation_good_army = {
+			removal_cost = -1
+			picture = eng_special_air_service
+			modifier = {
+				conscription = 0.03
+				army_org_factor = 0.05
+				army_infantry_attack_factor = 0.1
+				special_forces_attack_factor = 0.1
+				no_supply_grace = 24
+			}
+		
+		}
+		WW_HIP_primo_victoria_spirit = {
+			removal_cost = -1
+			picture = generic_victors_of_ww1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				industrial_capacity_dockyard = 0.5
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.5 
+			}		
+		}
+		WW_HIP_armed_citizens = {
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.25
+				resistance_target_on_our_occupied_states = 0.2
+			}		
+		}
+		WW_HIP_naval_focused = {
+			removal_cost = -1
+			picture = generic_the_london_naval_treaty
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_speed_arms_factory_factor = -0.8
+				production_speed_dockyard_factor = 0.5
+			}		
+		}
+	}
+}
