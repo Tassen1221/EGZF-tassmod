@@ -217,7 +217,7 @@ focus_tree = {
 	shared_focus = {
 		id = WW_HIP_prepare_worst
 		icon = GFX_goal_generic_more_territorial_claims
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = WW_HIP_situation_bad
@@ -349,6 +349,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.2
+			add_ideas = WW_HIP_primo_victoria_initial
 		}
 	}
 	shared_focus = {
@@ -427,9 +428,6 @@ focus_tree = {
 			focus = WW_HIP_situation_good
 		}
 
-		available = {
-		}
-
 		completion_reward = {
 			custom_effect_tooltip = WW_HIP_counter_attack_tt
 			hidden_effect = {
@@ -465,8 +463,15 @@ focus_tree = {
 			}
 		}
 
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
 		completion_reward = {
-			add_ideas = WW_HIP_primo_victoria_spirit
+			swap_ideas = {
+				remove_idea = WW_HIP_primo_victoria_initial
+				add_idea = WW_HIP_primo_victoria_final
+			}
 		}
 	}
 	shared_focus = {
