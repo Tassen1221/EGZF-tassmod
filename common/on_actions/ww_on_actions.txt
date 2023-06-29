@@ -59,6 +59,13 @@ on_actions = {
 			}		
 		}
 	}
+	#EQC and TRD Defend the fucking ports, I swear I am so fucking sick of this shit.
+	on_startup = {
+		effect = {
+			EQC = { country_event = { id = ww.19 days = 1825 }}
+			TRD = { country_event = { id = ww.19 days = 1825 }}
+		}
+	}
 	#Losing Hjortland removes CHN core buffs
 	on_state_control_changed = {
 		effect = {
