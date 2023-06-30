@@ -89,6 +89,9 @@ l_english:
  
  JER_tarrin_offensive:0 "Tarrin Offensive"
  JER_defence_of_aquileia:0 "Defence of Aquileia"
+
+ WW_JER_move_dockyards:0 "Naval Industry Transfer"
+ WW_JER_move_dockyards_desc:0 "Skyfall seeks to expand their civilian industry, we could negotiate to relocate their outdated naval industry to us instead, freeing up room for them and increasing our naval construction capacity."
  
  WW_tarrin_offensive:0 "Operation: 'Fuck Wingbardian Chromium'"
  WW_defence_of_aquileia:0 "Operation: 'Great Trial but with catbirds'"

@@ -1710,10 +1710,10 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			breakthrough = -2
-			reliability = -0.05
+			breakthrough = -4
+			reliability = 0.05
 		}
-		xp_cost = 100
+		xp_cost = 50
 		multiply_stats = {
 			build_cost_ic = -0.075
 		}
