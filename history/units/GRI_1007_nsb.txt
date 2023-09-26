@@ -1,3 +1,4 @@
+﻿
 division_template = {
 	name = "Imperial Guard Division"			#Infantry Division - kek
 	division_names_group = GRI_Inf_01
@@ -234,7 +235,7 @@ units = {
 	division = {
 		name = "Leichte-Division 'Synovial'"
 		location = 10537
-		division_template = "Panzer Division"
+		division_template = "Panzergrenadier Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0 
 	}
