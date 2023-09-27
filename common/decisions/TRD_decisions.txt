@@ -68,7 +68,7 @@ TRD_vaults = {
 							}
 						}
 					}
-					multiply_temp_variable = { add_to_bank = 0.25 }
+				multiply_temp_variable = { add_to_bank = 0.25 }
 				}
 				if = {
 					limit = {
@@ -907,10 +907,10 @@ foreign_politics = {
 		icon = ger_mefo_bills
 		available = {
 			num_of_civilian_factories > 10
-			any_owned_state = {
-				is_coastal = yes
-				is_fully_controlled_by = ROOT
-			}
+				any_owned_state = {
+					is_coastal = yes
+					is_fully_controlled_by = ROOT
+				}
 			NOT = {
 				has_idea = closed_economy
 				hidden_trigger = {
@@ -1011,7 +1011,7 @@ foreign_politics = {
 						has_completed_focus = FLO_trade_with_skyfall
 					}
 				}
-			}
+				}
 		}
 		targets = { TRD }
 		target_trigger = {

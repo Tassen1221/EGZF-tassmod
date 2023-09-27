@@ -20,7 +20,6 @@ focus_tree = {
 	shared_focus = HIP_harmonist_defeat # will be moved to own tree once development done
 	shared_focus = HIP_harmonist_victory # will be moved to own tree once development done
 	shared_focus = HIP_aris_eternal
-	shared_focus = HIP_never_another_crack
 	shared_focus = WW_HIP_war_begins
 }
 
@@ -111,6 +110,31 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1475 }
 	shared_focus = HIP_foundation_new_hippogriffia
 	shared_focus = HIP_foundation_new_state
+	shared_focus = HIP_continue_navy_modernisation
+	shared_focus = HIP_wingnot_accords
+	shared_focus = HIP_seapony_primacy
+	shared_focus = HIP_hippogriff_primacy
+	shared_focus = HIP_air_armament_committee
+}
+
+focus_tree = {
+	id = HIP_antifa_tree
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = HIP
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1475 }
+	shared_focus = HIP_never_another_crack
+	shared_focus = HIP_continue_navy_modernisation
+	shared_focus = HIP_wingnot_accords
+	shared_focus = HIP_seapony_primacy
+	shared_focus = HIP_hippogriff_primacy
+	shared_focus = HIP_air_armament_committee
 }
 focus_tree = {
 	id = HIP_SLPA_tree
@@ -686,7 +710,7 @@ focus_tree = {
 			factor = 10
 		}
 		bypass = {
-			amount_research_slots > 5
+			amount_research_slots > 4
 		}
 
 		prerequisite = {
@@ -4234,7 +4258,12 @@ focus_tree = {
 								has_idea = CTH_no_co_sufrit
 							}
 						}
-						add_ideas = CTH_no_co_sufrit
+						remove_ideas = {
+							CTH_batrun_zaryes
+							CTH_baltazar_zakbar
+							CTH_zaron_zorrel
+						}
+						activate_advisor = CTH_no_co_sufrit	
 					}
 					remove_ideas = {
 						CTH_batrun_zaryes
@@ -10550,25 +10579,17 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_foundation_new_hippogriffia
 		icon = GFX_HIP_raz_helmet
-		cost = 8
-		x = -2
+		cost = 6
+		x = 4
 		y = 1
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
 				character = HIP_razorbeak
-			}
-		}
-
-		allow_branch = {
-			NOT = {
-				has_completed_focus = HIP_import_the_revolution
-				has_completed_focus = HIP_harmony_above_all
-				has_country_flag = HIP_hide_raft
 			}
 		}
 
@@ -10583,13 +10604,13 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_foundation_new_state
 		icon = GFX_HIP_raz_paper
-		cost = 8
+		cost = 6
 		x = 4
 		y = 0
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 
 		available = {
@@ -10598,13 +10619,7 @@ shared_focus = {
 				character = HIP_razorbeak
 			}
 		}
-		allow_branch = {
-			NOT = {
-				has_completed_focus = HIP_import_the_revolution
-				has_completed_focus = HIP_harmony_above_all
-				has_country_flag = HIP_hide_raft
-			}
-		}
+
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -10619,13 +10634,13 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_prioritize_youth_groups
 		icon = GFX_HIP_raz_youth
-		cost = 8
+		cost = 6
 		x = -2
 		y = 1
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		prerequisite = {
 			focus = HIP_foundation_new_hippogriffia
@@ -10645,13 +10660,13 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_parents_as_traitors
 		icon = GFX_HIP_raz_parents
-		cost = 8
+		cost = 6
 		x = -3
 		y = 2
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		prerequisite = {
 			focus = HIP_prioritize_youth_groups
@@ -10662,19 +10677,21 @@ shared_focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
 			country_event = commander.5
 		}
 	}
 	shared_focus = {
 		id = HIP_break_family_bonds
 		icon = GFX_HIP_raz_family
-		cost = 8
+		cost = 6
 		x = -2
 		y = 3
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		prerequisite = {
 			focus = HIP_parents_as_traitors
@@ -10696,13 +10713,13 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_you_will_succeed
 		icon = GFX_HIP_raz_victory
-		cost = 8
+		cost = 6
 		x = -1
 		y = 2
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		prerequisite = {
 			focus = HIP_prioritize_youth_groups
@@ -10714,6 +10731,10 @@ shared_focus = {
 
 		completion_reward = {
 			country_event = commander.10
+			swap_ideas = {
+				remove_idea = HIP_divided_society_9
+				add_idea = HIP_divided_society_10
+			}
 			if = {
 				limit = {
 					has_idea = HIP_crisis_3
@@ -10743,7 +10764,7 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_school_as_barracks
 		icon = GFX_HIP_raz_school
-		cost = 8
+		cost = 6
 		x = -3
 		y = 4
 		relative_position_id = HIP_foundation_new_hippogriffia
@@ -10769,7 +10790,7 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_violence_as_exultation
 		icon = GFX_HIP_raz_violence
-		cost = 8
+		cost = 6
 		x = -1
 		y = 4
 		relative_position_id = HIP_foundation_new_hippogriffia
@@ -10791,18 +10812,20 @@ shared_focus = {
 
 		completion_reward = {
 			country_event = commander.8
+			add_ideas = HIP_razorbeak_callousness
+			custom_effect_tooltip = HIP_RAZ_seaponies_beaten_tt
 		}
 	}
 	shared_focus = {
 		id = HIP_immortalize_the_ace
 		icon = GFX_HIP_raz_ace
-		cost = 8
+		cost = 6
 		x = 2
 		y = 1
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		prerequisite = {
 			focus = HIP_foundation_new_hippogriffia
@@ -10847,13 +10870,13 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_demand_skystar_back
 		icon = GFX_HIP_raz_skystar
-		cost = 5
+		cost = 3
 		x = 2
 		y = 2
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		prerequisite = {
 			focus = HIP_immortalize_the_ace
@@ -10886,13 +10909,13 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_culture_of_outrage
 		icon = GFX_HIP_raz_rage
-		cost = 8
+		cost = 6
 		x = 1
 		y = 3
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		prerequisite = {
 			focus = HIP_demand_skystar_back
@@ -10929,13 +10952,13 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_rage_against_them
 		icon = GFX_HIP_raz_taken
-		cost = 8
+		cost = 6
 		x = 1
 		y = 4
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		prerequisite = {
 			focus = HIP_culture_of_outrage
@@ -10986,6 +11009,54 @@ shared_focus = {
 		}
 	}
 	shared_focus = {
+		id = HIP_fear_machine
+		icon = GFX_HIP_raz_fear
+		cost = 6
+		x = 3
+		y = 3
+		relative_position_id = HIP_foundation_new_hippogriffia
+		
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = HIP_demand_skystar_back
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			country_event = commander.9
+		}
+	}
+	shared_focus = {
+		id = HIP_eternal_readiness
+		icon = GFX_HIP_raz_ready
+		cost = 6
+		x = 3
+		y = 4
+		relative_position_id = HIP_foundation_new_hippogriffia
+		
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = HIP_fear_machine
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = HIP_eternal_readiness
+		}
+	}
+	shared_focus = {
 		id = HIP_twenty_year_plan
 		icon = GFX_HIP_raz_20
 		cost = 8
@@ -11003,65 +11074,27 @@ shared_focus = {
 			focus = HIP_eternal_readiness
 		}
 
+		select_effect = {
+			country_event = {
+				id = commander.12
+				days = 3
+			}
+		}
+
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = HIP_social_engineering
-			country_event = commander.12
-		}
-	}
-	shared_focus = {
-		id = HIP_fear_machine
-		icon = GFX_HIP_raz_fear
-		cost = 8
-		x = 3
-		y = 3
-		relative_position_id = HIP_foundation_new_hippogriffia
-		
-		ai_will_do = {
-			factor = 5
-		}
-		prerequisite = {
-			focus = HIP_demand_skystar_back
-		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			country_event = commander.9
-		}
-	}
-	shared_focus = {
-		id = HIP_eternal_readiness
-		icon = GFX_HIP_raz_ready
-		cost = 8
-		x = 3
-		y = 4
-		relative_position_id = HIP_foundation_new_hippogriffia
-		
-		ai_will_do = {
-			factor = 5
-		}
-		prerequisite = {
-			focus = HIP_fear_machine
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = HIP_eternal_readiness
+			custom_effect_tooltip = HIP_twenty_year_tt
 		}
 	}
 	shared_focus = {
 		id = HIP_fortress_hippogriffia
 		icon = GFX_HIP_raz_fort
-		cost = 8
+		cost = 6
 		x = 5
 		y = 4
 		relative_position_id = HIP_foundation_new_hippogriffia
@@ -11097,7 +11130,7 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_new_model_army
 		icon = GFX_HIP_raz_army
-		cost = 8
+		cost = 6
 		x = 6
 		y = 1
 		relative_position_id = HIP_foundation_new_hippogriffia
@@ -11127,7 +11160,7 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_absolute_hierarchy
 		icon = GFX_HIP_raz_arrows
-		cost = 8
+		cost = 6
 		x = 4
 		y = 2
 		relative_position_id = HIP_foundation_new_hippogriffia
@@ -11354,7 +11387,7 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_unquestioning_loyalty
 		icon = GFX_HIP_raz_loyalty
-		cost = 8
+		cost = 6
 		x = 6
 		y = 2
 		relative_position_id = HIP_foundation_new_hippogriffia
@@ -11457,7 +11490,7 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_glory_in_death
 		icon = GFX_HIP_raz_glory
-		cost = 8
+		cost = 6
 		x = 8
 		y = 2
 		relative_position_id = HIP_foundation_new_hippogriffia
@@ -11488,26 +11521,19 @@ shared_focus = {
 				}
 				set_country_flag = kamikaze_flag
 			}
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect_bba
-				hidden_effect = { set_technology = { suicide_charge = 1 popup = no} }
-			}
 			custom_effect_tooltip = kamikaze_focus_tooltip
 		}
 	}
 	shared_focus = {
 		id = HIP_the_state_is_the_army
 		icon = GFX_HIP_raz_gov
-		cost = 8
+		cost = 6
 		x = 6
 		y = 3
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 
 		prerequisite = {
@@ -11531,16 +11557,19 @@ shared_focus = {
 	shared_focus = {
 		id = HIP_new_generation_of_officers
 		icon = GFX_HIP_raz_officer
-		cost = 8
+		cost = 6
 		x = 7
 		y = 4
 		relative_position_id = HIP_foundation_new_hippogriffia
 		
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		prerequisite = {
 			focus = HIP_the_state_is_the_army
+		}
+		available = {
+			has_idea = HIP_loyal_army
 		}
 
 		cancel_if_invalid = yes
@@ -11549,6 +11578,328 @@ shared_focus = {
 
 		completion_reward = {#Buncha new officers
 			country_event = commander.13
+			swap_ideas = {
+				remove_idea = HIP_loyal_army
+				add_idea = HIP_loyal_army_2
+			}
+		}
+	}
+	shared_focus = {
+		id = HIP_avenge_the_defeat
+		icon = GFX_HIP_raz_avenge_defeat
+		cost = 6
+		x = 2
+		y = 1
+		relative_position_id = HIP_twenty_year_plan
+		mutually_exclusive = {
+			focus = HIP_how_dare_they
+		}
+		mutually_exclusive = {
+			focus = HIP_avenge_the_ace
+		}
+		allow_branch = {
+			has_country_flag = HIP_raz_plan
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				WIN = {
+					exists = yes
+					is_ai = no
+				}
+				factor = 0
+			}
+		}
+		prerequisite = {
+			focus = HIP_twenty_year_plan
+		}
+
+		select_effect = {
+			hidden_effect = {
+				set_country_flag = HIP_second_war
+			}
+		}
+
+		available = {
+			hidden_trigger = {is_subject = no}
+			custom_trigger_tooltip = {
+				tooltip = HIP_raz_edge_case_tt
+				OR = {
+					CTH = {
+						exists = yes
+						is_subject = no
+					}
+					ZAR = {
+						exists = yes
+						is_subject = no
+					}
+					WAR = {
+						exists = yes
+						is_subject = no
+					}
+					BAT = {
+						exists = yes
+						is_subject = no
+					}
+					WIN = {
+						exists = yes
+						is_subject = no
+					}
+					TBK = {
+						exists = yes
+						is_subject = no
+					}
+					HIE = {
+						exists = yes
+						is_subject = no
+					}
+					TRO = {
+						exists = yes
+						is_subject = no
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		available_if_capitulated = no
+
+		will_lead_to_war_with = CTH
+		will_lead_to_war_with = CVA
+		will_lead_to_war_with = HIE
+		will_lead_to_war_with = TRO
+		will_lead_to_war_with = TBK
+		will_lead_to_war_with = BAT
+		will_lead_to_war_with = WIN
+		will_lead_to_war_with = WAR
+		will_lead_to_war_with = ZAR
+		will_lead_to_war_with = WNG
+
+
+		completion_reward = {
+			country_event = {
+				id = commander.17
+				hours = 4
+			}
+			if = {
+				limit = {
+					CTH = {
+						owns_state = 697
+					}
+				}
+				declare_war_on = {
+					target = CTH
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					CVA = {
+						owns_state = 697
+					}
+				}
+				declare_war_on = {
+					target = CVA
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					HIE = {
+						owns_state = 697
+					}
+				}
+				declare_war_on = {
+					target = HIE
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					TRO = {
+						owns_state = 697
+					}
+				}
+				declare_war_on = {
+					target = TRO
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					ZUM = {
+						owns_state = 697
+					}
+				}
+				declare_war_on = {
+					target = ZUM
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					TBK = {
+						owns_state = 697
+					}
+				}
+				declare_war_on = {
+					target = TBK
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					ZAR = {
+						owns_state = 697
+					}
+				}
+				declare_war_on = {
+					target = ZAR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					WAR = {
+						owns_state = 697
+					}
+				}
+				declare_war_on = {
+					target = WAR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					WIN = {
+						exists = yes
+					}
+				}
+				declare_war_on = {
+					target = WIN
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						BAT = {
+							owns_state = 710
+						}
+						BAT = {
+							has_completed_focus = BAT_the_commonwealth
+						}
+						BAT = {
+							has_completed_focus = BAT_the_commonwealth_2
+						}
+					}
+				}
+				declare_war_on = {
+					target = BAT
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = HIP_avenge_the_ace
+		icon = GFX_HIP_raz_avenge_ace
+		cost = 6
+		x = -2
+		y = 1
+
+		relative_position_id = HIP_twenty_year_plan
+		mutually_exclusive = {
+			focus = HIP_how_dare_they
+		}
+		mutually_exclusive = {
+			focus = HIP_avenge_the_defeat
+		}
+		allow_branch = {
+			has_country_flag = HIP_raz_plan
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+			focus = HIP_twenty_year_plan
+		}
+		available = {
+			hidden_trigger = {is_subject = no}
+			EQS = {
+				exists = yes
+				has_government = democratic
+				has_war = yes
+				any_enemy_country = {is_major = yes}
+			}
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = no
+		will_lead_to_war_with = EQS
+
+		completion_reward = {
+			if = {
+				limit = {
+					EQS = {
+						has_war_with = CHN
+					}
+				}
+				CHN = {
+					country_event = commander.24
+				}
+			}
+			else_if = {
+				limit = {
+					EQS = {
+						has_war_with = CRY
+					}
+					CRY = {
+						has_government = fascism
+					}
+				}
+				CRY = {
+					country_event = commander.24
+				}
+			}
+			else = {
+				create_wargoal = {
+					type = annex_everything
+					target = EQS
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = HIP_how_dare_they
+		icon = GFX_HIP_raz_kill_them
+		cost = 6
+		x = 0
+		y = 1
+
+		relative_position_id = HIP_twenty_year_plan
+		mutually_exclusive = {
+			focus = HIP_avenge_the_ace
+		}
+		mutually_exclusive = {
+			focus = HIP_avenge_the_defeat
+		}
+		allow_branch = {
+			has_country_flag = HIP_raz_plan
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = HIP_twenty_year_plan
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = HIP_army_purge_2_electric_boogaloo
+				days = 180
+			}
 		}
 	}
 
@@ -14084,7 +14435,7 @@ shared_focus = {
 			focus = HIP_the_immortal_science_of_dialectical_materialism
 		}
 		bypass = {
-			amount_research_slots > 5
+			amount_research_slots > 4
 		}		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -14343,7 +14694,9 @@ shared_focus = {
 
 		available = {
 			has_completed_focus = HIP_permanent_revolution
-			has_full_control_of_state = 697
+			697 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
 			num_of_nukes > 0
 			custom_trigger_tooltip = {
 				tooltip = HIP_posada_all_NZ
@@ -14440,7 +14793,12 @@ shared_focus = {
 			}
 		}
 		select_effect = {
-			country_event = hippocommie.54
+			if = {
+				limit = {
+					has_full_control_of_state = 697
+				}
+				country_event = hippocommie.54
+			}
 			if = {
 				limit = {
 					has_country_flag = {
@@ -18933,7 +19291,7 @@ shared_focus = {
 			STG = {
 				NOT = {
 					has_country_leader = {
-						character = STG_vasiliy_pantsushenko
+						character = STG_vasiliy_wheatin
 						ruling_only = yes
 					}	
 				}
@@ -18960,7 +19318,7 @@ shared_focus = {
 				limit = {
 					STG = {
 						has_country_leader = {
-							character = STG_vasiliy_pantsushenko
+							character = STG_vasiliy_wheatin
 							ruling_only = yes
 						}
 					}
@@ -19876,6 +20234,7 @@ shared_focus = {
 						days = 5
 					}
 			}
+			set_cosmetic_tag = HIP_nzf
 			custom_effect_tooltip = HIP_annex_warzena_and_zumidia_tt
 			custom_effect_tooltip = HIP_severity_increase_tt
 		}
@@ -19920,7 +20279,6 @@ shared_focus = {
 
 		completion_reward = {
 			navy_experience = 25
-			two_random_dockyards = yes
 			two_random_dockyards = yes
 		}
 	}
@@ -21095,10 +21453,13 @@ shared_focus = {
 
 		available = {
 			num_of_civilian_factories > 25
+			NOT = {
+				has_idea = isolation
+			}
 		}
 		
 		bypass = {
-			amount_research_slots > 5
+			amount_research_slots > 4
 		}
 
 		cancel_if_invalid = yes
@@ -26723,23 +27084,42 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus HIP_SIR_war_in_the_sky"
-		add_tech_bonus = {
-			name = early_fighter
-			bonus = 1
-			uses = 1
-			category = light_fighter
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 1
+				category = medium_air
+			}
 		}
-		add_tech_bonus = {
-			name = HIP_air_land_warfare_focus
-			bonus = 1
-			uses = 1
-			category = cas_bomber
-		}
-		add_tech_bonus = {
-			name = HIP_tactical_bombing
-			bonus = 1
-			uses = 1
-			category = tactical_bomber
+		else = {
+			add_tech_bonus = {
+				name = early_fighter
+				bonus = 1
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = HIP_air_land_warfare_focus
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+			add_tech_bonus = {
+				name = HIP_tactical_bombing
+				bonus = 1
+				uses = 1
+				category = tactical_bomber
+			}
 		}
 	}
 }

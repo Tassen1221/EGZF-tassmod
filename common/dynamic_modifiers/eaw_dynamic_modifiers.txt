@@ -901,7 +901,6 @@
 		recruitable_population_factor = 0.25
 		MONTHLY_POPULATION = 1.00
     }
-
 	PLB_brutalized_state1 = {
 		enable = { always = yes }
 
@@ -935,12 +934,12 @@
 		state_production_speed_buildings_factor = -0.30
 		industry_repair_factor = -0.30
 	}
-
+	
 	PLB_naturalist_assimilation = {
 		enable = { always = yes }
 
 		icon = GFX_modifiers_changeling_settlement_icon
-
+		
 		local_manpower = 0.50
 		compliance_growth = 0.010
 		resistance_growth = -0.05
@@ -1583,7 +1582,7 @@
 	WNG_feline_assimilation_modifier = {
 		enable = { always = yes }
 	
-		icon = GFX_modifiers_changeling_settlement_icon
+		icon = GFX_modifiers_pizza
 		
 		compliance_growth = 0.1
 		resistance_growth = -0.1
@@ -1881,7 +1880,7 @@
 		local_non_core_manpower = 0.25
 		state_resources_factor = 0.5
 	}
-
+	
 	HEL_alexandras_agitators = {
 		icon = GFX_modifiers_empowered_state_resistance
 		enable = {
