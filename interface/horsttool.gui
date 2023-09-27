@@ -31,7 +31,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "horsttool_container"
 		position = {x=1200 y=20}
-		size = { width=650 height=600}
+		size = { width=650 height=700}
 		
 		fade_time = 300
 		fade_type = linear

@@ -71,8 +71,8 @@ scripted_gui = {
 						if={limit={check_variable= { Root.selected_cheat=5} } add_offsite_building = { type = dockyard level =  1 }}
 						if={limit={check_variable= { Root.selected_cheat=6} } add_offsite_building = { type = dockyard level =  -1 }}
 						if={limit={check_variable= { Root.selected_cheat=7} } add_political_power = 50 }
-						if={limit={check_variable= { Root.selected_cheat=8} } add_stability = 10 }
-						if={limit={check_variable= { Root.selected_cheat=9} } add_war_support = 10 }
+						if={limit={check_variable= { Root.selected_cheat=8} } add_stability = 0.1 }
+						if={limit={check_variable= { Root.selected_cheat=9} } add_war_support = 0.1 }
 						if={limit={check_variable= { Root.selected_cheat=10} } add_manpower = 100000 }
 						if={limit={check_variable= { Root.selected_cheat=11} } add_ideas = WW_army_cheat }
 						if={limit={check_variable= { Root.selected_cheat=12} } remove_ideas = WW_army_cheat }
@@ -196,6 +196,13 @@ scripted_gui = {
 			cheat12_click={set_variable={Root.selected_cheat=12} ROOT= { clr_country_flag = cheating} }
 			cheat13_click={set_variable={Root.selected_cheat=13} ROOT= { clr_country_flag = cheating} }
 			cheat14_click={set_variable={Root.selected_cheat=14} ROOT= { clr_country_flag = cheating} }
+			cheat15_click={set_variable={Root.selected_cheat=15} ROOT= { clr_country_flag = cheating} }
+			cheat16_click={set_variable={Root.selected_cheat=16} ROOT= { clr_country_flag = cheating} }
+			cheat17_click={set_variable={Root.selected_cheat=17} ROOT= { clr_country_flag = cheating} }
+			cheat18_click={set_variable={Root.selected_cheat=18} ROOT= { clr_country_flag = cheating} }
+			cheat19_click={set_variable={Root.selected_cheat=19} ROOT= { clr_country_flag = cheating} }
+			cheat20_click={set_variable={Root.selected_cheat=20} ROOT= { clr_country_flag = cheating} }
+			cheat21_click={set_variable={Root.selected_cheat=21} ROOT= { clr_country_flag = cheating} }
 		}
 		properties = {
 
@@ -233,6 +240,13 @@ scripted_gui = {
 			cheat12_visible={ROOT= { has_country_flag = cheating} }
 			cheat13_visible={ROOT= { has_country_flag = cheating} }
 			cheat14_visible={ROOT= { has_country_flag = cheating} }
+			cheat15_visible={ROOT= { has_country_flag = cheating} }
+			cheat16_visible={ROOT= { has_country_flag = cheating} }
+			cheat17_visible={ROOT= { has_country_flag = cheating} }
+			cheat18_visible={ROOT= { has_country_flag = cheating} }
+			cheat19_visible={ROOT= { has_country_flag = cheating} }
+			cheat20_visible={ROOT= { has_country_flag = cheating} }
+			cheat21_visible={ROOT= { has_country_flag = cheating} }
 			cheat8_text_visible={ROOT= { has_country_flag = cheating} }
 			cheat9_text_visible={ROOT= { has_country_flag = cheating} }
 			cheat10_text_visible={ROOT= { has_country_flag = cheating} }
@@ -240,6 +254,13 @@ scripted_gui = {
 			cheat12_text_visible={ROOT= { has_country_flag = cheating} }
 			cheat13_text_visible={ROOT= { has_country_flag = cheating} }
 			cheat14_text_visible={ROOT= { has_country_flag = cheating} }
+			cheat15_text_visible={ROOT= { has_country_flag = cheating} }
+			cheat16_text_visible={ROOT= { has_country_flag = cheating} }
+			cheat17_text_visible={ROOT= { has_country_flag = cheating} }
+			cheat18_text_visible={ROOT= { has_country_flag = cheating} }
+			cheat19_text_visible={ROOT= { has_country_flag = cheating} }
+			cheat20_text_visible={ROOT= { has_country_flag = cheating} }
+			cheat21_text_visible={ROOT= { has_country_flag = cheating} }
 			clear_all_markings_click_enabled = {
 				check_variable = { ROOT.marked_states^num > 0 }
 			}
