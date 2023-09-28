@@ -15,31 +15,31 @@ country_event = { #The New Economy
 	}
 	picture = GFX_farm_event
 	is_triggered_only = yes
-	option = {
-		name = marschen.1.a
-		ai_chance = {
-			base = 50
-			modifier = {
-				factor = 0.5
-				has_government = fascism
-			}
-			modifier = {
-				factor = 0
-				has_government = communism
-			}
-			modifier = {
-				factor = 2
-				has_government = democratic
-			}
-			modifier = {
-				factor = 1.5
-				has_government = neutrality
-			}
-		}
-		hidden_effect = {
-			complete_national_focus = PYT_agrarianism
-		}
-	}
+	#option = {
+	#	name = marschen.1.a
+	#	ai_chance = {
+	#		base = 50
+	#		modifier = {
+	#			factor = 0.5
+	#			has_government = fascism
+	#		}
+	#		modifier = {
+	#			factor = 0
+	#			has_government = communism
+	#		}
+	#		modifier = {
+	#			factor = 2
+	#			has_government = democratic
+	#		}
+	#		modifier = {
+	#			factor = 1.5
+	#			has_government = neutrality
+	#		}
+	#	}
+	#	hidden_effect = {
+	#		complete_national_focus = PYT_agrarianism
+	#	}
+	#}
 	option = {
 		name = marschen.1.b
 		ai_chance = {
