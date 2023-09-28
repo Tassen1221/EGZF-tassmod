@@ -502,6 +502,10 @@ country_event = { #Changeling Equipment (Use Guichard's Perspective)
 				has_dlc = "By Blood Alone"
 				has_tech = iw_small_airframe
 			}
+			set_technology = {
+				aa_lmg = 1
+				engines_1 = 1
+			}
 			add_tech_bonus = {
 				name = fighter_bonus
 				bonus = 1.0
@@ -524,6 +528,8 @@ country_event = { #Changeling Equipment (Use Guichard's Perspective)
 			}
 			set_technology = {
 				iw_small_airframe = 1
+				aa_lmg = 1
+				engines_1 = 1
 			}
 			generic_early_fighter = yes
 			add_equipment_to_stockpile = {
@@ -2745,8 +2751,13 @@ country_event = { #New Fascist Government
 		}
 		add_stability = 0.10
 		add_war_support = 0.05
-		event_target:GRI_archon_eros_vii_target = {
-			set_nationality = ROOT
+		every_possible_country = {
+			limit = {
+				has_character = GRI_archon_eros_vii
+			}
+			GRI_archon_eros_vii = {
+				set_nationality = ROOT
+			}
 		}
 		promote_character = {
 			character = GRI_archon_eros_vii
@@ -3167,8 +3178,13 @@ country_event = { #Grover VI Becomes Emperor
 		add_political_power = 200
 		add_stability = 0.05
 		retire_country_leader = yes
-		event_target:GRI_emperor_grover_vi_target = {
-			set_nationality = ROOT
+		every_possible_country = {
+			limit = {
+				has_character = GRI_emperor_grover_vi
+			}
+			GRI_emperor_grover_vi = {
+				set_nationality = ROOT
+			}
 		}
 		GRI_emperor_grover_vi = {
 			set_portraits = {
@@ -4234,6 +4250,10 @@ country_event = { #flavour event
 		NOT = {
 			has_country_leader = { ruling_only = yes character = GRI_ferdinand_dawnclaw }
 		}
+		has_game_rule = {
+			rule = eog_april_fool
+			option = DEFAULT
+		}
 	}
 	
 	picture = GFX_event_griffon_back
@@ -4274,10 +4294,10 @@ country_event = { #flavour event
 	is_triggered_only = yes
 	
 	option = {
-	name = tradefed.147.a
-	add_political_power = 20
-	add_manpower = 1000
-	    }
+		name = tradefed.147.a
+		add_political_power = 20
+		add_manpower = 1000
+	}
 }
 
 country_event = { #flavour event
