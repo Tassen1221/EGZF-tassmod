@@ -405,10 +405,6 @@ technologies = {
 
 	tech_recon = {
 
-		enable_equipment_modules = {
-			improved_periscopes
-		}
-
 		enable_subunits = {
 			recon
 			mot_recon
@@ -470,10 +466,6 @@ technologies = {
 	}
 
 	tech_recon2 = {
-
-		enable_equipment_modules = {
-			optical_rangefinder
-		}
 
 		category_recon = {
 			recon = 2
@@ -1205,10 +1197,6 @@ technologies = {
 
 	tech_logistics_company = {
 
-		enable_equipment_modules = {
-			boiling_vessel
-			vents
-		}
 		enable_subunits = {
 			logistics_company
 		}
