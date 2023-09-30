@@ -76,8 +76,52 @@ scripted_gui = {
 						if={limit={check_variable= { Root.selected_cheat=10} } add_manpower = 100000 }
 						if={limit={check_variable= { Root.selected_cheat=11} } add_ideas = WW_army_cheat }
 						if={limit={check_variable= { Root.selected_cheat=12} } remove_ideas = WW_army_cheat }
-						if={limit={check_variable= { Root.selected_cheat=13} } add_ideas = WW_industry_cheat }
-						if={limit={check_variable= { Root.selected_cheat=14} } remove_ideas = WW_industry_cheat }
+						if={limit={check_variable= { Root.selected_cheat=13} }
+							division_template = {
+								name = "Tank Division"
+								regiments = {
+									magical_mechanized = { x = 0 y = 0 }
+									magical_mechanized = { x = 0 y = 1 }
+									magical_mechanized = { x = 0 y = 2 }
+									magical_mechanized = { x = 0 y = 3 }
+								
+									magical_mechanized = { x = 1 y = 0 }
+									magical_mechanized = { x = 1 y = 1 }
+									magical_mechanized = { x = 1 y = 2 }
+									magical_mechanized = { x = 1 y = 3 }
+							
+									medium_armor = { x = 2 y = 0 }
+									medium_armor = { x = 2 y = 1 }
+									medium_armor = { x = 2 y = 2 }
+									medium_armor = { x = 2 y = 3 }
+									medium_armor = { x = 2 y = 4 }
+							
+									medium_armor = { x = 3 y = 0 }
+									medium_tank_destroyer_brigade = { x = 3 y = 1 }
+									medium_tank_destroyer_brigade = { x = 3 y = 2 }
+									medium_tank_destroyer_brigade = { x = 3 y = 3 }
+							
+									medium_tank_destroyer_brigade = { x = 4 y = 0 }
+									medium_tank_destroyer_brigade = { x = 4 y = 1 }
+									medium_tank_destroyer_brigade = { x = 4 y = 2 }
+									medium_tank_destroyer_brigade = { x = 4 y = 3 }
+								}
+								support = {
+									anti_tank = { x = 0 y = 0 }
+									medium_flame_tank = { x = 0 y = 1 }
+									engineer = { x = 0 y = 2 }
+									anti_air = { x = 0 y = 3 }
+								}
+							}
+						}
+						if={limit={check_variable= { Root.selected_cheat=14} }
+							random_owned_controlled_state = {
+								create_unit = {
+									division = "name = \"Tank Division\" division_template = \"Tank Division\" start_experience_factor = 1 start_equipment_factor = 1"
+									owner = ROOT
+								}
+							}
+						}
 						if={limit={check_variable= { Root.selected_cheat=15} } add_ideas = WW_industry_growth_cheat }
 						if={limit={check_variable= { Root.selected_cheat=16} } remove_ideas = WW_industry_growth_cheat }
 						if={limit={check_variable= { Root.selected_cheat=17} } add_ideas = WW_dockyard_cheat }
