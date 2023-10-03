@@ -8,8 +8,6 @@ state={
 		oil = 5
 	}
 	history={
-		owner = CNT
-		add_core_of = CNT
 		buildings = {
 			infrastructure = 0
 			13368 = { naval_base = 1 }			

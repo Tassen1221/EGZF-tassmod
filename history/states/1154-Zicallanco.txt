@@ -6,8 +6,6 @@ state={
 		rubber=7
 	}
 	history={
-		owner = CNT
-		add_core_of = CNT
 		buildings = {
 			industrial_complex = 1
 			16127 = {

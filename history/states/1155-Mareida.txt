@@ -5,8 +5,6 @@ state={
 		13377 20262 20264 
 	}
 	history={
-		owner = CNT
-		add_core_of = CNT
 		buildings = {
 			infrastructure = 0
 			13377 = { 

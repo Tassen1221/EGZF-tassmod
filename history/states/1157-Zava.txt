@@ -9,8 +9,6 @@ state={
 		rubber = 2
 	}
 	history={
-		owner = CNT
-		add_core_of = CNT
 		buildings = {
 			infrastructure = 1
 			dockyard = 1
