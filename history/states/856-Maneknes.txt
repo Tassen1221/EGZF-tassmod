@@ -6,11 +6,6 @@ state={
 		crystals=18.000
 	}
 	history={
-		owner = SDL
-		add_core_of = SDL
-		add_core_of = SDL
-		add_core_of = SDL
-		add_core_of = SDL
 		victory_points = {
 			14925 1 
 		}

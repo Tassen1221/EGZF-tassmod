@@ -4,9 +4,6 @@ state={
 	name="STATE_804"
 
 	history={
-		owner = SDL
-		add_core_of = SDL
-		add_claim_by = SDL
 		buildings = {
 			infrastructure = 1
 		}
