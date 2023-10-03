@@ -7,8 +7,6 @@ state={
 		crystals = 10
 	}
 	history={
-		owner = CNT
-		add_core_of = CNT
 		victory_points = {
 			16213 2
 		}

@@ -6,8 +6,6 @@ state={
 		steel=14
 	}
 	history={
-		owner = CNT
-		add_core_of = CNT
 		buildings = {
 			infrastructure = 0
 
