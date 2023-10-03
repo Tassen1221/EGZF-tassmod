@@ -10,7 +10,6 @@ state={
 		crystals = 10
 	}
 	history={
-		owner = KIR
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
@@ -19,7 +18,6 @@ state={
 		victory_points = {
 			17484 3 
 		}
-		add_core_of = KIR
 	}
 	provinces={
 		17435 17440 17443 17451 17452 17454 17465 17467 17477 17478 17484 17489 17499 17503 17504 

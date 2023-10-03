@@ -7,8 +7,6 @@ state={
 		oil = 5
 	}
 	history={
-		add_core_of = KIR
-		owner = KIR
 		victory_points = {
 			1234 5
 		}

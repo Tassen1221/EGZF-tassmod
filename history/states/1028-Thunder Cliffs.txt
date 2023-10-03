@@ -6,11 +6,6 @@ state={
 		chromium = 12
 	}
 	history={
-		owner = STM
-		add_core_of = STM
-		add_core_of = STM
-		add_core_of = STM
-		add_core_of = STM
 		buildings = {
 			infrastructure = 2
 			dockyard = 1

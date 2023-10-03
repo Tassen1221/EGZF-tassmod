@@ -6,8 +6,6 @@ state={
 	}
 	state_category = city
 	history = {
-		owner = SDL
-		add_core_of = SDL
 		buildings = {
 			dockyard = 1
 			industrial_complex = 2

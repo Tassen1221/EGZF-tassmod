@@ -4,9 +4,6 @@ state={
 	name="STATE_1044"
 
 	history={
-		owner = STM
-		add_core_of = STM
-		add_claim_by = STM
 
 	}
 

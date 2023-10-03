@@ -4,8 +4,6 @@ state={
 	name="STATE_1053"
 
 	history={
-		add_core_of = CNT
-		owner = CNT
 		
 		buildings = {
 			infrastructure = 2

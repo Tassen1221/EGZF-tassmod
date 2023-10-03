@@ -7,8 +7,6 @@ state={
 		crystals=6.000
 	}
 	history={
-		owner = SDL
-		add_core_of = SDL
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
