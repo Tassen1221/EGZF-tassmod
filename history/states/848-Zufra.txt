@@ -4,11 +4,6 @@ state={
 	name="STATE_848"
 
 	history={
-		owner = SDL
-		add_core_of = SDL
-		add_core_of = SDL
-		add_core_of = SDL
-		add_core_of = SDL
 		buildings = {
 			infrastructure = 1
 

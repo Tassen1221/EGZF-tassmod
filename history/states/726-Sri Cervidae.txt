@@ -6,8 +6,6 @@ state={
 		steel=11.000
 	}
 	history={
-		owner = KIR
-		add_core_of = KIR
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

@@ -3,9 +3,6 @@ state={
 	name="STATE_898"
 	state_category = wasteland
 	history={
-		owner = STM
-		add_core_of = STM
-		add_claim_by = STM
 		buildings = {
 			infrastructure = 0
 		}		
