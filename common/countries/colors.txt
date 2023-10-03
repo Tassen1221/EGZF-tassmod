@@ -463,10 +463,7 @@ LUS = {
 	color = rgb { 190 226 172 }
 	color_ui = rgb { 190 226 172 }
 }
-FIR = {
-	color = rgb { 62 97 88 }
-	color_ui = rgb { 62 97 88 }
-}
+
 FEZ = {
 	color = rgb { 143 201 197 }
 	color_ui = rgb { 143 201 197 }
@@ -479,10 +476,7 @@ WAT = {
 	color = rgb { 33 35 80 }
 	color_ui = rgb { 33 35 80 }
 }
-FBK = {
-	color = rgb { 134 137 213 }
-	color_ui = rgb { 134 137 213 }
-}
+
 GRU = {
 	color = rgb { 80 135 121 }
 	color_ui = rgb { 80 135 121 }
@@ -650,22 +644,3 @@ LMB = {
 	color_ui = rgb { 177 207 205 }
 }
 
-SDL = {
-	color = rgb { 0 108 53 }
-	color_ui = rgb { 0 108 53 }
-}
-
-STM = {
-	color = rgb { 0 69 135 }
-	color_ui = rgb { 0 69 135 }
-}
-
-KIR = {
-	color = rgb { 237 45 0 }
-	color_ui = rgb { 237 45 0 }
-}
-
-CNT = {
-	color = rgb { 200 4 0 }
-	color_ui = rgb { 200 4 0 }
-}
