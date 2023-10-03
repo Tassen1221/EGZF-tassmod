@@ -8,12 +8,6 @@ state={
 	}
 
 	history={
-		owner = STM
-		add_core_of = STM
-		add_core_of = STM
-		add_core_of = STM
-		add_core_of = STM
-		add_core_of = STM
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

@@ -3,8 +3,6 @@ state={
 	name="STATE_1086"
 	state_category = rural
 	history={
-		owner = KIR
-		add_core_of = KIR
 		buildings = {
 			infrastructure = 0
 		}

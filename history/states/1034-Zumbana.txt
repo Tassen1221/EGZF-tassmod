@@ -6,11 +6,6 @@ state={
 		15310 15317 15322 19341 19344 19345 19352 19356 19364 
 	}
 	history={
-		owner = STM
-		add_core_of = STM
-		add_core_of = STM
-		add_core_of = STM
-		add_core_of = STM
 		buildings = {
 			infrastructure = 1
 		}

@@ -7,8 +7,6 @@ state={
 	}
 
 	history={
-		owner = STM
-		add_core_of = STM
 		buildings = {
 			infrastructure = 1
 			16752 = { naval_base = 2 }

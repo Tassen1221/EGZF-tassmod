@@ -4,8 +4,6 @@ state={
 	name="STATE_1043"
 
 	history={
-		owner = STM
-		add_core_of = STM
 		buildings = {
 			infrastructure = 1
 
