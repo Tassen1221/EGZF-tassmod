@@ -7,8 +7,6 @@ state={
 	}
 	state_category = town
 	history={
-		owner = KIR
-		add_core_of = KIR
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

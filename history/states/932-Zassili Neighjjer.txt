@@ -3,9 +3,6 @@ state={
 	name="STATE_932"
 	
 	history={
-		owner = CNT
-		add_core_of = CNT
-		add_claim_by = CNT
 	}
 	
 	

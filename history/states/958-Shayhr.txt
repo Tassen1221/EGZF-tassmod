@@ -4,8 +4,6 @@ state={
 	name="STATE_958"
 
 	history={
-		owner = SDL
-		add_core_of = SDL
 		buildings = {
 			infrastructure = 1
 			air_base = 1

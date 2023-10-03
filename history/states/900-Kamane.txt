@@ -7,9 +7,6 @@ state={
 	}
 	state_category = rural
 	history={
-		owner = STM
-		add_core_of = STM
-		add_claim_by = STM
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1

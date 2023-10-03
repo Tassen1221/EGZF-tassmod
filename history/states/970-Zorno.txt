@@ -6,9 +6,6 @@ state={
 		1242 1283 1310 3817 4180 19508 19509 19512 19523 19528 19532 20302 20309 
 	}
 	history={
-		owner = STM
-		add_core_of = STM
-		add_claim_by = STM
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1

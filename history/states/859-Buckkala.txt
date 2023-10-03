@@ -3,11 +3,6 @@ state={
 	name="STATE_859"
 	state_category = rural
 	history = {
-		owner = SDL
-		add_core_of = SDL
-		add_core_of = SDL
-		add_core_of = SDL
-		add_core_of = SDL
 		buildings = {
 			infrastructure = 1
 		}
