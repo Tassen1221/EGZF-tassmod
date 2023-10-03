@@ -5,9 +5,6 @@ state={
 		steel = 7
 	}
 	history={
-		owner = CNT
-		add_core_of = CNT
-		add_claim_by = CNT
 		victory_points = {
 			19863 3
 		}
