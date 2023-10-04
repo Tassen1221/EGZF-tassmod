@@ -12,9 +12,8 @@ state={
 	#impassable=yes
 
 	history = {
-		owner = BAN
-		add_core_of = BAN
-		add_core_of = BOI
+		owner = GRW
+		add_core_of = GRW
 	}
 
 	resources={
