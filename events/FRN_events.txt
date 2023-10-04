@@ -1,4 +1,4 @@
-add_namespace = francistria
+﻿add_namespace = francistria
 add_namespace = francistria_news
 
 country_event = { #Council meeting
@@ -1093,6 +1093,15 @@ country_event = { #Francistria gives Tarrin
 	picture = GFX_event_medieval_castle_on_hill
 
 	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_inviter
+			FROM = {
+				save_event_target_as = alliance_applicant
+			}
+		}
+	}
 
 	option = {
 		name = francistria.30.a
@@ -1834,6 +1843,26 @@ country_event = { #Commies attempt takeover
 			ruling_party = communism
 		}
 		set_country_flag = have_regular_puppets
+		remove_opinion_modifier = {
+			target = MIT
+			modifier = SIC_antimonarchism
+		}
+		remove_opinion_modifier = {
+			target = SIC
+			modifier = SIC_antimonarchism
+		}
+		MIT = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = SIC_antimonarchism
+			}
+		}
+		SIC = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = SIC_antimonarchism
+			}
+		}
 		load_focus_tree = { 
 			tree = FRN_com_focus
 			keep_completed = yes		   
@@ -1860,13 +1889,25 @@ country_event = { #Commies attempt takeover
 				  value = -200
 			  }
 			}
-			if = {
-				limit = {
-					is_subject_of = WNG
+		}
+		else_if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+			
+		}
+		if = {
+			limit = {
+				is_subject = yes
+				overlord = { 
+					NOT = {
+						has_government = communism
+					}
 				}
-				WNG = {
-					end_puppet = ROOT
-				}
+			}
+			overlord = { 
+				end_puppet = ROOT
 			}
 		}
 		FRN_anger_fascists = yes
@@ -2403,6 +2444,7 @@ country_event = { #FRN joins us!
 			limit = { is_core_of = FROM }
 			add_core_of = ROOT
 		}
+		set_country_flag = WNG_integrates_FRN
 		annex_country = {
 			target = FROM
 			transfer_troops = yes
@@ -2428,6 +2470,26 @@ country_event = { #Harmonist intervention
 			ruling_party = democratic
 		}
 		set_country_flag = have_regular_puppets
+		remove_opinion_modifier = {
+			target = MIT
+			modifier = SIC_antimonarchism
+		}
+		remove_opinion_modifier = {
+			target = SIC
+			modifier = SIC_antimonarchism
+		}
+		MIT = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = SIC_antimonarchism
+			}
+		}
+		SIC = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = SIC_antimonarchism
+			}
+		}
 		load_focus_tree = { 
 			tree = FRN_harm_focus
 			keep_completed = yes		   
@@ -2465,6 +2527,19 @@ country_event = { #Harmonist intervention
 				WNG = {
 					end_puppet = ROOT
 				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+				overlord = { 
+					NOT = {
+						has_government = democratic
+					}
+				}
+			}
+			overlord = { 
+				end_puppet = ROOT
 			}
 		}
 		FRN_anger_fascists = yes
@@ -3171,6 +3246,11 @@ country_event = { #peace in tarrin
 		if = {
 			limit = {
 				owns_state = 487
+				487 = {
+					has_dynamic_modifier = {
+						modifier = FRN_tarrin_resistance_modifier
+					}
+				}
 			}
 			487 = {
 				remove_dynamic_modifier = {
@@ -3181,6 +3261,11 @@ country_event = { #peace in tarrin
 		if = {
 			limit = {
 				owns_state = 652
+				652 = {
+					has_dynamic_modifier = {
+						modifier = FRN_tarrin_resistance_modifier
+					}
+				}
 			}
 			652 = {
 				remove_dynamic_modifier = {
@@ -3191,6 +3276,11 @@ country_event = { #peace in tarrin
 		if = {
 			limit = {
 				owns_state = 521
+				521 = {
+					has_dynamic_modifier = {
+						modifier = FRN_tarrin_resistance_modifier
+					}
+				}
 			}
 			521 = {
 				remove_dynamic_modifier = {
@@ -3318,11 +3408,7 @@ country_event = { #Tarrin capitulates
 
 	is_triggered_only = yes
 
-	option = {
-		name = francistria.82.a
-		add_political_power = 100
-		add_stability = -0.05
-		set_country_flag = FRN_FLNT_crushed
+	immediate = {
 		hidden_effect = {
 			if = {
 				limit = {
@@ -3360,6 +3446,13 @@ country_event = { #Tarrin capitulates
 				add_state_core = 652
 			}
 		}
+	}
+
+	option = {
+		name = francistria.82.a
+		add_political_power = 100
+		add_stability = -0.05
+		set_country_flag = FRN_FLNT_crushed
 		if = {
 			limit = {
 				has_war_with = JER
@@ -3390,6 +3483,10 @@ country_event = { #FRN offers peace
 		every_other_country = {
 			limit = {
 				has_war_with = ROOT
+				OR = {
+					original_tag = FRN
+					is_in_faction_with = FRN
+				}
 			}
 			set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
 			white_peace = ROOT
@@ -3403,7 +3500,7 @@ country_event = { #Peace with Tarrin
 	title = francistria.84.t
 	desc = francistria.84.d
 	picture = GFX_event_griffons_machine_gun
-
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -3463,6 +3560,13 @@ country_event = { #Commie civil war in Wingbardy
 				original_tag = WNG
 				has_government = fascism
 			}
+			if = {
+				limit = {
+					is_faction_leader = no
+				}
+				create_faction = Southern_Kingdoms
+			}
+			add_to_faction = ROOT
 			give_military_access = ROOT
 			country_event = francistria.126
 			ROOT = {
@@ -3555,10 +3659,6 @@ country_event = { #Commie civil war in Wingbardy
 		}
 		ai_chance = {
 			factor = 0
-			modifier = {
-				factor = 0.25
-				has_country_flag = FRN_dicksucking_path
-			}
 		}
 	}
 }
@@ -3825,7 +3925,7 @@ country_event = { #Integration complete
 		FRN_vittorio_felice = {
 			retire = yes
 		}
-		event_target:FRN_Gherita = {
+		FRN_gherita_zarfatti = {
 			set_nationality = WNG
 		}
 		custom_effect_tooltip = GAME_OVER_TT
@@ -3843,6 +3943,7 @@ country_event = { #Integration complete, for WNG
 	is_triggered_only = yes
 	option = {
 		name = francistria.92.a
+		set_country_flag = WNG_integrates_FRN
 		annex_country = { target = FROM transfer_troops = yes }
 		every_state = {
 			limit = { is_core_of = FROM }
@@ -3929,6 +4030,13 @@ country_event = { #Coming to beakolini's aid
 					original_tag = WNG
 					has_government = fascism
 				}
+				if = {
+					limit = {
+						is_faction_leader = no
+					}
+					create_faction = Southern_Kingdoms
+				}
+				add_to_faction = ROOT
 				give_military_access = ROOT
 				country_event = francistria.126
 				ROOT = {
@@ -4013,6 +4121,26 @@ country_event = { #Commies coup the coup
 			ruling_party = communism
 		}
 		set_country_flag = have_regular_puppets
+		remove_opinion_modifier = {
+			target = MIT
+			modifier = SIC_antimonarchism
+		}
+		remove_opinion_modifier = {
+			target = SIC
+			modifier = SIC_antimonarchism
+		}
+		MIT = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = SIC_antimonarchism
+			}
+		}
+		SIC = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = SIC_antimonarchism
+			}
+		}
 		load_focus_tree = { 
 			tree = FRN_com_focus
 			keep_completed = yes		   
@@ -4045,13 +4173,25 @@ country_event = { #Commies coup the coup
 				  value = -200
 			  }
 			}
-			if = {
-				limit = {
-					is_subject_of = WNG
+		}
+		else_if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+			
+		}
+		if = {
+			limit = {
+				is_subject = yes
+				overlord = { 
+					NOT = {
+						has_government = communism
+					}
 				}
-				WNG = {
-					end_puppet = ROOT
-				}
+			}
+			overlord = { 
+				end_puppet = ROOT
 			}
 		}
 	}
@@ -4073,6 +4213,26 @@ country_event = { #Harmonists coup the coup
 			ruling_party = democratic
 		}
 		set_country_flag = have_regular_puppets
+		remove_opinion_modifier = {
+			target = MIT
+			modifier = SIC_antimonarchism
+		}
+		remove_opinion_modifier = {
+			target = SIC
+			modifier = SIC_antimonarchism
+		}
+		MIT = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = SIC_antimonarchism
+			}
+		}
+		SIC = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = SIC_antimonarchism
+			}
+		}
 		load_focus_tree = {
 			tree = FRN_harm_focus
 			keep_completed = yes		   
@@ -4105,6 +4265,19 @@ country_event = { #Harmonists coup the coup
 				  type = alliance
 				  value = -200
 			  }
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+				overlord = { 
+					NOT = {
+						has_government = democratic
+					}
+				}
+			}
+			overlord = { 
+				end_puppet = ROOT
 			}
 		}
 	}
@@ -4345,6 +4518,7 @@ country_event = { #the final showdown
 		if = {
 			limit = {
 				WNG = {
+					exists = yes
 					has_government = fascism
 				}
 			}
@@ -4402,6 +4576,7 @@ country_event = { #the final showdown
 		if = {
 			limit = {
 				WNG = {
+					exists = yes
 					has_government = fascism
 				}
 			}

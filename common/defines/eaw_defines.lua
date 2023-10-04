@@ -146,6 +146,7 @@ NDefines.NAir.NAVAL_STRIKE_DETECTION_BALANCE_FACTOR = 0.7		-- Value used to scal
 NDefines.NAir.NAVAL_RECON_DETECTION_BALANCE_FACTOR = 0.7			-- Value used to scale the surface_visibility stats to balance the gameplay, so 100% detection chance still won't spam spotting.
 NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.005								-- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
 NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.5	-- damage reduction for incoming air attacks is clamped to this value at maximum.
+NDefines.NNavy.CARRIER_STACK_PENALTY = 4					-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
 
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0					-- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
 NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0				-- XP cost for replacing one equipment module with an unrelated module when creating an equipment variant.
@@ -155,6 +156,8 @@ NDefines.NProduction.MAX_EQUIPMENT_RESOURCES_NEED = 4
 
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0							-- Base IC cost for lended license
 NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0				-- IC cost equipment for every year of equipment after 1936
+
+NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10
 
 NDefines.NMilitary.UNIT_EXP_LEVELS = {0.02,	0.04,	0.06,	0.08,	0.1,	0.14,	0.18,	0.22,	0.26,	0.3}		-- Experience needed to progress to the next level
 
@@ -182,6 +185,8 @@ NDefines.NDiplomacy.TENSION_DECAY = 0.1 -- default 0.1, changed from 0.25 in EaW
 
 NDefines.NCountry.WAR_SUPPORT_DEFENSIVE_WAR = 0.3				-- Impact of being in defensive war
 
+NDefines.NCountry.AIR_SUPPLY_CONVERSION_SCALE = 0.05				-- Conversion scale for planes to air supply
+
 NDefines.NNavy.MISSION_SUPREMACY_RATIOS = {
 		0.0, -- HOLD
 		1.0, -- PATROL
@@ -197,6 +202,9 @@ NDefines.NNavy.MISSION_SUPREMACY_RATIOS = {
 NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CONVOYS = 0.1 -- this screen ratio to num convoys is needed for full screening beyond screen line
 NDefines.NNavy.CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CONVOYS = 0.05 -- this capital ratio to num convoys is needed for full screening beyond screen line
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0						-- Chances one ship get damage each hour while on training
+
+NDefines.NNavy.HIT_PROFILE_MULT = 50.0	-- multiplies hit profile of every ship
+NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 5.0	-- damage bonus when planes are in naval combat where their carrier is present (and can thus sortie faster and more effectively)
 
 NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 2	-- Base year ahead penalty. Vanilla is 2. Changed back to 2 from 2.5 in vanilla EaW
 

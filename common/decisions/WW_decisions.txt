@@ -2076,6 +2076,54 @@ foreign_politics = {
 			}
 		}
 	}
+	WW_JER_move_dockyards = {
+		icon = GFX_decision_generic_construction
+		available = {
+			379 = {
+				is_controlled_by = TRD
+				dockyard > 1
+			}
+			380 = {
+				is_controlled_by = TRD
+				dockyard > 1
+			}
+			381 = {
+				is_controlled_by = TRD
+				dockyard > 1
+			}
+		}
+		allowed = {
+			original_tag = JER
+		}
+		visible = {
+			has_completed_focus = JER_reforming_the_admirality
+		}
+		
+		complete_effect = {
+			379 = {
+				remove_building = {
+					type = dockyard
+					level = 2
+				}
+			}
+			380 = {
+				remove_building = {
+					type = dockyard
+					level = 2
+				}
+			}
+			381 = {
+				remove_building = {
+					type = dockyard
+					level = 2
+				}
+			}
+			two_random_dockyards = yes
+			two_random_dockyards = yes
+			two_random_dockyards = yes
+
+		}
+	}
 }
 	
 	

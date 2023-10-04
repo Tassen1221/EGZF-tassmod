@@ -193,7 +193,7 @@ equipment_modules = {
 		add_stats = {
 			maximum_speed = 500
 			thrust = 45
-			build_cost_ic = 32
+			build_cost_ic =32
 			fuel_consumption = 0.32
 		}
 
@@ -1499,7 +1499,7 @@ equipment_modules = {
 			}
 			add_stats = {
 				naval_strike_attack = 5
-				naval_strike_targetting = 10
+				naval_strike_targetting = 15
 			}
 		}
 		dismantle_cost_ic = 4
@@ -1647,11 +1647,11 @@ equipment_modules = {
 			air_defence = -6
 			build_cost_ic = 0
 		}
-		multiply_stats = {
-			build_cost_ic = -0.075
-		}
 		build_cost_resources = {
 			aluminium = -2
+		}
+		multiply_stats = {
+			build_cost_ic = -0.075
 		}
 		dismantle_cost_ic = 7
 		dismantle_cost_resources = {
@@ -2258,7 +2258,8 @@ equipment_modules = {
 				attack_logistics
 			}
 			add_stats = {
-				night_penalty = -0.1
+				air_ground_attack = 4
+				night_penalty = -0.2
 			}
 		}
 		xp_cost = 0
@@ -2296,7 +2297,8 @@ equipment_modules = {
 				attack_logistics
 			}
 			add_stats = {
-				night_penalty = -0.2
+				air_ground_attack = 5
+				night_penalty = -0.4
 			}
 		}
 		xp_cost = 0
@@ -2356,6 +2358,9 @@ equipment_modules = {
 			build_cost_ic = 8
 			weight = 1
 		}
+		multiply_stats = {
+			air_attack = 0.05
+		}
 		mission_type_stats = {
 			limit = {
 				interception
@@ -2369,7 +2374,7 @@ equipment_modules = {
 				air_superiority
 			}
 			add_stats = {
-				night_penalty = -0.1
+				night_penalty = -0.2
 			}
 		}
 		xp_cost = 0
@@ -2386,6 +2391,9 @@ equipment_modules = {
 			build_cost_ic = 10
 			weight = 1
 		}
+		multiply_stats = {
+			air_attack = 0.1
+		}
 		mission_type_stats = {
 			limit = {
 				interception
@@ -2399,7 +2407,7 @@ equipment_modules = {
 				air_superiority
 			}
 			add_stats = {
-				night_penalty = -0.2
+				night_penalty = -0.4
 			}
 		}
 		xp_cost = 0

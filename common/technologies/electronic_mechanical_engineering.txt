@@ -46,7 +46,6 @@ technologies = {
 
 		categories = {
 			electronics
-			ai_basic_start
 		}
 
 
@@ -296,7 +295,6 @@ technologies = {
 			ship_radar_4
 			air_ground_radar_2
 			air_air_radar_2
-			tank_radio_4
 		}
 
 		path = {
@@ -490,10 +488,6 @@ technologies = {
 
 		# small boost to research speed
 		research_speed_factor = 0.08
-		enable_equipment_modules = {
-			tank_fire_control
-		}
-
 		path = {
 			leads_to_tech = advanced_encryption
 			research_cost_coeff = 1
@@ -850,6 +844,108 @@ technologies = {
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 0.75
+			modifier = {
+				OR = { is_major = yes num_of_military_factories > 39 }
+				factor = 1.5
+			}
+			
+		}
+		
+		categories = {
+			electronics
+			computing_tech
+			naval_equipment
+			fire_control
+		}
+	}
+
+	semi_modern_fire_control_system = {
+
+		enable_equipment_modules = { 
+			ship_fire_control_system_4
+			ship_torpedo_data_computer_4
+		}
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		research_cost = 10
+		start_year = 1023
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 0.75
+			modifier = {
+				OR = { is_major = yes num_of_military_factories > 39 }
+				factor = 1.5
+			}
+			
+		}
+		
+		categories = {
+			electronics
+			computing_tech
+			naval_equipment
+			fire_control
+		}
+	}
+
+	modern_fire_control_system = {
+
+		enable_equipment_modules = { 
+			ship_fire_control_system_5
+			ship_torpedo_data_computer_5
+		}
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		research_cost = 10
+		start_year = 1025
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 0.75
+			modifier = {
+				OR = { is_major = yes num_of_military_factories > 39 }
+				factor = 1.5
+			}
+			
+		}
+		
+		categories = {
+			electronics
+			computing_tech
+			naval_equipment
+			fire_control
+		}
+	}
+
+	modern_fire_control_system_2 = {
+
+		enable_equipment_modules = { 
+			ship_fire_control_system_6
+			ship_torpedo_data_computer_6
+		}
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		research_cost = 10
+		start_year = 1028
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 24 }
 		}
 		
 		ai_will_do = {
@@ -1559,6 +1655,503 @@ technologies = {
 		}
 		show_effect_as_desc = yes
 	}
+	
+	###------> X <><> <><> <><> <><> <><>
+
+	###------> New Radar <><> <><> <><> <><> <><>
+
+	future_radar = {
+
+		enable_building = {
+			building = radar_station
+			level = 7
+		}
+		coordination_bonus = 0.01
+
+		path = {
+			leads_to_tech = future_radar_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 10
+		start_year = 1026
+
+
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 20 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			electronics
+			radar_tech
+		}
+	}
+
+	future_radar_2 = {
+
+		enable_building = {
+			building = radar_station
+			level = 8
+		}	
+		coordination_bonus = 0.01
+		enable_equipment_modules = {
+			tank_radio_4
+			ship_radar_5
+			air_air_radar_3
+			air_ground_radar_3
+		}
+
+		path = {
+			leads_to_tech = future_radar_3
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 10
+		start_year = 1030
+
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 24 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			electronics
+			radar_tech
+		}
+	}
+
+	future_radar_3 = {
+
+		enable_building = {
+			building = radar_station
+			level = 9
+		}
+		path = {
+			leads_to_tech = future_radar_4
+			research_cost_coeff = 1
+		}
+		coordination_bonus = 0.01
+
+		enable_equipment_modules = {
+			tank_radio_5
+			ship_radar_6
+			radio_navigation_3
+		}
+
+		research_cost = 10
+		start_year = 1034
+
+
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 28 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			electronics
+			radar_tech
+		}
+	}
+
+
+	future_radar_4 = {
+
+		air_detection = 0.05
+		naval_detection = 0.05
+		coordination_bonus = 0.01
+
+		research_cost = 10
+		start_year = 1036
+		enable_equipment_modules = {
+			air_air_radar_4
+			air_ground_radar_4
+		}
+
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 30 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			electronics
+			radar_tech
+		}
+	}
+
+	###------> New Computers <><> <><> <><> <><> <><>
+
+	future_computing_machine = {
+
+		# small boost to research speed
+		research_speed_factor = 0.06
+		path = {
+			leads_to_tech = future_encryption
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_decryption
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_encryption_lar
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_decryption_lar
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_computing_machine_2
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = modern_fire_control_system
+			research_cost_coeff = 1
+		}
+
+		research_cost = 10
+		start_year = 1025
+
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 18 }
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		categories = {
+			electronics
+			encryption_tech
+			decryption_tech
+			computing_tech
+		}
+	}
+
+	future_computing_machine_2 = {
+
+		# small boost to research speed
+		research_speed_factor = 0.05
+		enable_equipment_modules = {
+			stabilizer_2
+			bomb_sights_3
+		}
+		path = {
+			leads_to_tech = future_encryption_2
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_decryption_2
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_encryption_2_lar
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_decryption_2_lar
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_computing_machine_3
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = modern_fire_control_system_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 10
+		start_year = 1028
+
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 22 }
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		categories = {
+			electronics
+			encryption_tech
+			decryption_tech
+			computing_tech
+		}
+	}
+
+	future_computing_machine_3 = {
+
+		# small boost to research speed
+		research_speed_factor = 0.04
+		path = {
+			leads_to_tech = future_encryption_3
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_decryption_3
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_encryption_3_lar
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_decryption_3_lar
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = future_computing_machine_4
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			streamlined_line_b = 1
+		}
+
+		research_cost = 10
+		start_year = 1032
+
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 26 }
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		categories = {
+			electronics
+			encryption_tech
+			decryption_tech
+			computing_tech
+		}
+	}
+
+	future_computing_machine_4 = {
+
+		# small boost to research speed
+		research_speed_factor = 0.04
+		enable_equipment_modules = {
+			stabilizer_3
+			gun_computer
+			bomb_sights_4
+		}
+		research_cost = 10
+		start_year = 1036
+
+		dependencies = {
+			streamlined_line_c = 1
+		}
+
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 30 }
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		categories = {
+			electronics
+			encryption_tech
+			decryption_tech
+			computing_tech
+		}
+	}
+
+
+
+	###------> New Codes <><> <><> <><> <><> <><>
+
+	future_encryption = {
+
+		# encryption 3
+		encryption = 0.5
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		research_cost = 10
+		start_year = 1025
+
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 18 }
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+
+		categories = {
+			electronics
+			encryption_tech
+		}
+	}
+
+	future_decryption = {
+
+		# decryption 3
+		decryption = 0.5
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		research_cost = 10
+		start_year = 1025
+
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 18 }
+		}
+
+		ai_will_do = {
+			factor = 1.25
+		}
+
+		categories = {
+			electronics
+			decryption_tech
+		}
+	}
+
+	future_encryption_2 = {
+
+		# encryption 3
+		encryption = 0.3
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		research_cost = 10
+		start_year = 1028
+
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 22 }
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+
+		categories = {
+			electronics
+			encryption_tech
+		}
+	}
+
+	future_decryption_2 = {
+
+		# decryption 3
+		decryption = 0.3
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		research_cost = 10
+		start_year = 1028
+
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 22 }
+		}
+
+		ai_will_do = {
+			factor = 1.25
+		}
+
+		categories = {
+			electronics
+			decryption_tech
+		}
+	}
+
+	future_encryption_3 = {
+
+		# encryption 3
+		encryption = 0.2
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		research_cost = 10
+		start_year = 1032
+
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 26 }
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+
+		categories = {
+			electronics
+			encryption_tech
+		}
+	}
+
+	future_decryption_3 = {
+
+		# decryption 3
+		decryption = 0.2
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		research_cost = 10
+		start_year = 1032
+
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 26 }
+		}
+
+		ai_will_do = {
+			factor = 1.25
+		}
+
+		categories = {
+			electronics
+			decryption_tech
+		}
+	}
+
+
+	###------> X <><> <><> <><> <><> <><>
 
 	###------> New Rocket Engines <><> <><> <><> <><> <><>
 
@@ -1907,6 +2500,169 @@ technologies = {
 			decryption_tech
 		}
 	}
+	
+	future_encryption_lar = {
+	
+		# encryption 3
+		crypto_strength = 1
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
+		research_cost = 10
+		start_year = 1025
+	
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 18 }
+		}
+	
+		ai_will_do = {
+			factor = 1.5
+		}
+	
+		categories = {
+			electronics
+			encryption_tech
+		}
+	}
+	
+	future_decryption_lar = {
+	
+		# decryption 3
+		decryption_power = 10
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
+		research_cost = 10
+		start_year = 1025
+	
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 18 }
+		}
+	
+		ai_will_do = {
+			factor = 1.25
+			modifier = {
+				NOT = { has_done_agency_upgrade = upgrade_form_department }
+				factor = 0
+			}
+		}
+	
+		categories = {
+			electronics
+			decryption_tech
+		}
+	}
+	
+	future_encryption_2_lar = {
+	
+		# encryption 3
+		crypto_strength = 1
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
+		research_cost = 10
+		start_year = 1028
+	
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 22 }
+		}
+	
+		ai_will_do = {
+			factor = 1.5
+		}
+	
+		categories = {
+			electronics
+			encryption_tech
+		}
+	}
+	
+	future_decryption_2_lar = {
+	
+		# decryption 3
+		decryption_power = 5
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
+		research_cost = 10
+		start_year = 1028
+	
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 22 }
+		}
+	
+		ai_will_do = {
+			factor = 1.25
+			modifier = {
+				NOT = { has_done_agency_upgrade = upgrade_form_department }
+				factor = 0
+			}
+		}
+	
+		categories = {
+			electronics
+			decryption_tech
+		}
+	}
+	
+	future_encryption_3_lar = {
+	
+		# encryption 3
+		crypto_strength = 1
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
+		research_cost = 10
+		start_year = 1032
+	
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 26 }
+		}
+	
+		ai_will_do = {
+			factor = 1.5
+		}
+	
+		categories = {
+			electronics
+			encryption_tech
+		}
+	}
+	
+	future_decryption_3_lar = {
+	
+		# decryption 3
+		decryption_power = 5
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
+		research_cost = 10
+		start_year = 1032
+	
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 26 }
+		}
+	
+		ai_will_do = {
+			factor = 1.25
+			modifier = {
+				NOT = { has_done_agency_upgrade = upgrade_form_department }
+				factor = 0
+			}
+		}
+	
+		categories = {
+			electronics
+			decryption_tech
+		}
+	}
+
 }
 
 #####-----------------------------------------------------------> End

@@ -68,9 +68,6 @@ technologies = {
 			wet_ammo_storage
 			smoke_launchers
 			expanded_fuel_tank
-			troop_compartment
-			open_top
-			wartime_simplification
 		}
 		enable_subunits = {
 			light_armor
@@ -165,9 +162,7 @@ technologies = {
 
 	basic_light_tank_chassis = { #Panzer I
 
-		enable_equipment_modules = {
-			cupola_1
-		}
+
 		enable_equipments = {
 			light_tank_chassis_1
 			light_tank_destroyer_chassis_1
@@ -259,9 +254,7 @@ technologies = {
 
 	improved_light_tank_chassis = { #Panzer II
 
-		enable_equipment_modules = {
-			cupola_2
-		}
+
 		enable_equipments = {
 			light_tank_chassis_2
 			light_tank_destroyer_chassis_2
@@ -479,9 +472,7 @@ technologies = {
 
 	advanced_light_tank_chassis = { #Leopard
 
-		enable_equipment_modules = {
-			cupola_3
-		}
+
 		enable_equipments = {
 			light_tank_chassis_3
 			light_tank_destroyer_chassis_3
@@ -536,11 +527,114 @@ technologies = {
 		}
 	}
 
-	basic_medium_tank_chassis = { #Panzer III
+	semi_modern_light_tank_chassis = { #M41 Walker Bulldog
+
+		enable_equipments = {
+			light_tank_chassis_4
+		}
 
 		enable_equipment_modules = {
-			cupola_1
+			oscillating_turret
 		}
+
+		path = {
+			leads_to_tech = modern_light_tank_chassis
+			research_cost_coeff = 1
+		}
+
+		research_cost = 10
+		start_year = 1028
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -1 y = @1018 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				num_of_military_factories > 20
+				factor = 2
+			}
+
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1019.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1020.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1021.1.1"
+			}
+		}
+
+		categories = {
+			armor
+			cat_light_armor
+		}
+	}
+	
+	modern_light_tank_chassis = { #T92 Light Tank
+
+		enable_equipments = {
+			light_tank_chassis_5
+		}
+
+		research_cost = 10
+		start_year = 1034
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -1 y = @1024 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				num_of_military_factories > 20
+				factor = 2
+			}
+
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1019.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1020.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1021.1.1"
+			}
+		}
+
+		categories = {
+			armor
+			cat_light_armor
+		}
+	}
+
+	basic_medium_tank_chassis = { #Panzer III
+
+
 		enable_equipments = {
 			medium_tank_chassis_1
 			medium_tank_destroyer_chassis_1
@@ -632,9 +726,7 @@ technologies = {
 
 	improved_medium_tank_chassis = { #Panzer IV
 
-		enable_equipment_modules = {
-			cupola_2
-		}
+
 		enable_equipments = {
 			medium_tank_chassis_2
 			medium_tank_destroyer_chassis_2
@@ -706,9 +798,7 @@ technologies = {
 
 	advanced_medium_tank_chassis = { #Panther
 
-		enable_equipment_modules = {
-			cupola_3
-		}
+
 		enable_equipments = {
 			medium_tank_chassis_3
 			medium_tank_destroyer_chassis_3
@@ -832,11 +922,100 @@ technologies = {
 		}
 	}
 
+	main_battle_tank_chassis_b = { #M48 Patton
+
+	enable_equipments = {
+		modern_tank_chassis_2
+	}
+
+	research_cost = 10
+	start_year = 1031
+
+	folder = {
+		name = nsb_armour_folder
+		position = { x = 2 y = @1021 }
+	}
+	path = {
+		leads_to_tech = main_battle_tank_chassis_c
+		research_cost_coeff = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 2
+			num_of_military_factories > 58
+		}
+
+		modifier = {
+			has_war = yes
+			factor = 2
+		}
+
+		modifier = {
+			factor = 2
+			date > "1022.1.1"
+		}
+
+		modifier = {
+			factor = 2
+			date > "1023.1.1"
+		}
+
+		modifier = {
+			factor = 2
+			date > "1024.1.1"
+		}
+	}
+
+	categories = {
+		armor
+		cat_medium_armor
+	}
+}
+
+main_battle_tank_chassis_c = { #M60 Patton
+
+	enable_equipments = {
+		modern_tank_chassis_3
+	}
+	enable_equipment_modules = {
+		tank_hydropneumatic_suspension
+	}
+
+	research_cost = 10
+	start_year = 1036
+
+	folder = {
+		name = nsb_armour_folder
+		position = { x = 2 y = @1026 }
+	}
+
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 2
+			num_of_military_factories > 58
+		}
+
+		modifier = {
+			has_war = yes
+			factor = 2
+		}
+	}
+
+	categories = {
+		armor
+		cat_medium_armor
+	}
+}
+
+
 	basic_heavy_tank_chassis = { #Grosstraktor
 
-		enable_equipment_modules = {
-			cupola_1
-		}
+
 		enable_equipments = {
 			heavy_tank_chassis_1
 			heavy_tank_destroyer_chassis_1
@@ -914,9 +1093,7 @@ technologies = {
 
 	improved_heavy_tank_chassis = { #Tiger
 
-		enable_equipment_modules = {
-			cupola_2
-		}
+
 		enable_equipments = {
 			heavy_tank_chassis_2
 			heavy_tank_destroyer_chassis_2
@@ -970,9 +1147,7 @@ technologies = {
 
 	advanced_heavy_tank_chassis = { #King Tiger
 
-		enable_equipment_modules = {
-			cupola_3
-		}
+
 		enable_equipments = {
 			heavy_tank_chassis_3
 			heavy_tank_destroyer_chassis_3
@@ -1057,6 +1232,171 @@ technologies = {
 		}
 	}
 
+	super_heavy_tank_chassis_b = { #M103
+
+		enable_equipments = {
+			super_heavy_tank_chassis_2
+		}
+
+		enable_equipment_modules = {
+			tank_super_heavy_cannon_2
+		}
+
+		path = {
+			leads_to_tech = super_heavy_tank_chassis_c
+			research_cost_coeff = 1
+		}
+		super_heavy_armor = {
+			forest = {
+				attack = 0.1
+			}
+			hills = {
+				attack = 0.1
+			}
+			mountain = 	{
+				attack = 0.1
+			}
+			jungle = {
+				attack = 0.1
+			}
+			marsh = {
+				attack = 0.1
+			}
+			urban = {
+				attack = 0.1
+			}
+			river = {
+				attack = 0.1
+				movement = 0.1
+			}
+			amphibious = {
+				attack = 0.1
+			}
+		}
+		super_heavy_tank_destroyer_brigade = {
+			forest = {
+				attack = 0.1
+			}
+			hills = {
+				attack = 0.1
+			}
+			mountain = 	{
+				attack = 0.1
+			}
+			jungle = {
+				attack = 0.1
+			}
+			marsh = {
+				attack = 0.1
+			}
+			urban = {
+				attack = 0.1
+			}
+			river = {
+				attack = 0.1
+				movement = 0.1
+			}
+			amphibious = {
+				attack = 0.2
+			}
+		}
+		super_heavy_sp_artillery_brigade = {
+			forest = {
+				attack = 0.1
+			}
+			hills = {
+				attack = 0.1
+			}
+			mountain = 	{
+				attack = 0.1
+			}
+			jungle = {
+				attack = 0.1
+			}
+			marsh = {
+				attack = 0.1
+			}
+			urban = {
+				attack = 0.1
+			}
+			river = {
+				attack = 0.1
+				movement = 0.1
+			}
+			amphibious = {
+				attack = 0.2
+			}
+		}
+		super_heavy_sp_anti_air_brigade = {
+			forest = {
+				attack = 0.1
+			}
+			hills = {
+				attack = 0.1
+			}
+			mountain = 	{
+				attack = 0.1
+			}
+			jungle = {
+				attack = 0.1
+			}
+			marsh = {
+				attack = 0.1
+			}
+			urban = {
+				attack = 0.1
+			}
+			river = {
+				attack = 0.1
+			}
+			amphibious = {
+				attack = 0.2
+			}
+		}
+
+		research_cost = 10
+		start_year = 1030
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 8 y = @1020 }
+		}
+
+		ai_will_do = {
+			factor = 0 # Hitler cries on the inside
+		}
+
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+	super_heavy_tank_chassis_c = { #Object 279
+
+		enable_equipments = {
+			super_heavy_tank_chassis_3
+		}
+
+		enable_equipment_modules = {
+			tank_super_heavy_cannon_3
+		}
+
+		research_cost = 10
+		start_year = 1036
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 8 y = @1026 }
+		}
+
+		ai_will_do = {
+			factor = 0 # Hitler cries on the inside
+		}
+
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+
 	armor_tech_1 = {
 		enable_equipment_modules = {
 			tank_welded_armor
@@ -1071,7 +1411,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-			custom_effect_tooltip = WW_armor_tech_1_tt
+			custom_effect_tooltip = armor_tech_1_tt
 		}
 		show_effect_as_desc = yes
 
@@ -1130,7 +1470,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-			custom_effect_tooltip = WW_armor_tech_2_tt
+			custom_effect_tooltip = armor_tech_2_tt
 		}
 		show_effect_as_desc = yes
 
@@ -1187,7 +1527,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-			custom_effect_tooltip = WW_armor_tech_3_tt
+			custom_effect_tooltip = armor_tech_3_tt
 		}
 		show_effect_as_desc = yes
 
@@ -1245,7 +1585,111 @@ technologies = {
 		}
 
 		on_research_complete = {
-			custom_effect_tooltip = WW_armor_tech_4_tt
+			custom_effect_tooltip = armor_tech_4_tt
+		}
+		show_effect_as_desc = yes
+
+		ai_will_do = {
+			factor = 0.9
+
+			modifier = {
+				factor = 2
+				num_of_military_factories > 30
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1008.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1009.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1010.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+
+	armor_tech_5 = {
+
+		research_cost = 10
+		start_year = 1030
+		enable_equipment_modules = {
+			armor_skirts_2
+		}
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 3 y = @1020 }
+		}
+		path = {
+			leads_to_tech = armor_tech_6
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = armor_tech_5_tt
+		}
+		show_effect_as_desc = yes
+
+		ai_will_do = {
+			factor = 0.9
+
+			modifier = {
+				factor = 2
+				num_of_military_factories > 30
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1008.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1009.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1010.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+	armor_tech_6 = {
+
+		research_cost = 10
+		start_year = 1035
+		
+		enable_equipment_modules = {
+			tank_composite_armor
+		}
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 3 y = @1025 }
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = armor_tech_6_tt
 		}
 		show_effect_as_desc = yes
 
@@ -1290,7 +1734,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		on_research_complete = {
-			custom_effect_tooltip = WW_engine_tech_1_tt
+			custom_effect_tooltip = engine_tech_1_tt
 		}
 		dependencies = {
 			infantry_weapons = 1
@@ -1349,7 +1793,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-			custom_effect_tooltip = WW_engine_tech_2_tt
+			custom_effect_tooltip = engine_tech_2_tt
 		}
 		show_effect_as_desc = yes
 
@@ -1405,7 +1849,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		on_research_complete = {
-			custom_effect_tooltip = WW_engine_tech_3_tt
+			custom_effect_tooltip = engine_tech_3_tt
 		}
 		show_effect_as_desc = yes
 		research_cost = 1
@@ -1461,7 +1905,99 @@ technologies = {
 			position = { x = 2 y = @1013 }
 		}
 		on_research_complete = {
-			custom_effect_tooltip = WW_engine_tech_4_tt
+			custom_effect_tooltip = engine_tech_4_tt
+		}
+		show_effect_as_desc = yes
+		ai_will_do = {
+			factor = 0.9
+
+			modifier = {
+				factor = 2
+				num_of_military_factories > 30
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1008.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1009.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1010.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+	engine_tech_5= {
+
+		path = {
+			leads_to_tech = engine_tech_6
+			research_cost_coeff = 1
+		}
+		research_cost = 10
+		start_year = 1030
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = @1020 }
+		}
+		on_research_complete = {
+			custom_effect_tooltip = engine_tech_5_tt
+		}
+		show_effect_as_desc = yes
+		ai_will_do = {
+			factor = 0.9
+
+			modifier = {
+				factor = 2
+				num_of_military_factories > 30
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1008.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1009.1.1"
+			}
+
+			modifier = {
+				factor = 1.25
+				date > "1010.1.1"
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+	engine_tech_6= {
+
+		research_cost = 10
+		start_year = 1035
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = @1025 }
+		}
+		on_research_complete = {
+			custom_effect_tooltip = engine_tech_6_tt
 		}
 		show_effect_as_desc = yes
 		ai_will_do = {

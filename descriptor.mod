@@ -1,14 +1,11 @@
-version="3.7.4"
+version="1.2.1"
 tags={
 	"Balance"
-	"Events"
-	"Gameplay"
-	"National Focuses"
 }
 dependencies={
 	"Equestria at War"
 }
-name="Equus and Griffonia on Fire"
+name="EGZF: Tassmod"
 picture="thumbnail.png"
-supported_version="1.12.*"
-remote_file_id="2694179069"
+supported_version="1.12.14"
+remote_file_id="2985400652"

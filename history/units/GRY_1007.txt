@@ -156,17 +156,15 @@ units = {
 		start_equipment_factor = 0.4 }
 }
 
-
-
 ##### Starting Production #####
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_0
+			type = melee_equipment_1
 			creator = "GRY"
 		}
 		requested_factories = 4
 		progress = 0.15
-		efficiency = 30
+		efficiency = 25
 	}
 }

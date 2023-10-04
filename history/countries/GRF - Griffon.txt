@@ -196,6 +196,8 @@ recruit_character = GRF_lord_protector_trubach
 #pregrinded generals
 recruit_character = GRF_WW_fieldmarshel
 
+recruit_character = GRF_elder_elsa
+recruit_character = GRF_urlik_of_scyfling
 
 set_rule = {
 	can_generate_female_aces = yes

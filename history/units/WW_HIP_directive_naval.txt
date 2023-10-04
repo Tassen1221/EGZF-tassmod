@@ -1,0 +1,32 @@
+units = {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Directive Fleet"			
+		naval_base = 18741
+		task_force = {
+			name = "Directive Squadron"
+			location = 18741
+			ship = { name = "RHS Guardian" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = HIP version_name = "Guardian Class" } } }
+			ship = { name = "RHS Defender" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = HIP version_name = "Guardian Class" } } }
+			ship = { name = "RHS Protector" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = HIP version_name = "Guardian Class" } } }
+
+			ship = { name = "RHS Firework" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = HIP version_name = "Firework Class" } } }
+			ship = { name = "RHS Sulfer" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = HIP version_name = "Firework Class" } } }
+			ship = { name = "RHS Charcoal" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = HIP version_name = "Firework Class" } } }
+			ship = { name = "RHS Saltpeter" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = HIP version_name = "Firework Class" } } }
+
+			ship = { name = "RHS Tiny" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Small" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Mini" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Puny" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Little" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Minute" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Micro" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Short" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Teeny" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Petite" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Minor" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+			ship = { name = "RHS Nano" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = HIP version_name = "Wakefish Class" } } }
+		}
+	}
+}
