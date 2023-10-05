@@ -3,19 +3,23 @@ state={
 	id=983
 	name="STATE_983"
 	resources={
-		oil=3.000
-		aluminium=5.000
+		oil=290.000
+		aluminium=269.000
+		rubber=207.00
+		tungsten=252.00
+		steel=1135.00
+		chromiun=432.00
+		crystals=378.00
 	}
 
 	history={
+		owner = STM
+		add_core_of = STM
 		buildings = {
-			infrastructure = 2
-			dockyard = 2
 			20055 = {
 				naval_base = 5
 
 			}
-			air_base = 5
 
 		}
 		victory_points = {

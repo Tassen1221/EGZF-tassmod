@@ -276,20 +276,6 @@ set_war_support = 0.79
 
 add_manpower = 47500
 
-declare_war_on = {
-	target = SLC
-	type = annex_everything
-}
-
-declare_war_on = {
-	target = THU
-	type = annex_everything
-}
-
-declare_war_on = {
-	target = GYZ
-	type = annex_everything
-}
 HIP = { # must be here instead of HIP history file because of load order problem
 	add_equipment_to_stockpile = {
 		type = infantry_equipment_0
