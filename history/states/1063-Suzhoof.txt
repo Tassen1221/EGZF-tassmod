@@ -1,0 +1,31 @@
+
+state={
+	id=1063
+	name="STATE_1063"
+
+	history={
+
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			20356 5 
+		}
+		victory_points = {
+			20337 2
+		}
+		victory_points = {
+			20333 3
+		}
+		victory_points = {
+			20321 1
+		}
+	}
+
+	provinces={
+		16716 20319 20321 20323 20324 20325 20328 20329 20332 20333 20337 20339 20340 20342 20344 20349 20356 20370 
+	}
+	manpower=545414
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
