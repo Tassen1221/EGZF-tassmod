@@ -8,7 +8,7 @@ state={
 		rubber=207.00
 		tungsten=252.00
 		steel=1135.00
-		chromiun=432.00
+		chromium=432.00
 		crystals=378.00
 	}
 
